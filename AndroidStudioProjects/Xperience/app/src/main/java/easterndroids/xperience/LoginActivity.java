@@ -18,4 +18,6 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SignupActivity.class);
         startActivity(intent);
     }
+
+    //test comments
 }
