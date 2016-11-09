@@ -1,7 +1,7 @@
 package easterndroids.xperience;
 
 /**
- * Created by ghvk1 on 2016-11-01.
+ * Created by Yuan on 2016-11-01.
  */
 
 import android.app.ProgressDialog;
