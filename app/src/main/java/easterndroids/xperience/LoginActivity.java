@@ -20,5 +20,9 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //test comments vaishali
+    public void NavigateToUseXP(View view)
+    {
+        Intent intent = new Intent(this, XperienceActivity.class);
+        startActivity(intent);
+    }
 }

@@ -60,7 +60,6 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:onClick="NavigateToRegistration"
             android:background="#E3F2FD">
 
             <Button
@@ -78,7 +77,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/Login"
                 android:layout_marginTop="20dp"
-                android:layout_marginLeft="180dp" />
+                android:layout_marginLeft="180dp"
+                android:onClick="NavigateToUseXP" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
