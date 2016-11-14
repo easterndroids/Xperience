@@ -1,16 +1,21 @@
 package easterndroids.xperience;
 
 import android.content.Intent;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
+    EditText UsernameEt,PasswordEt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        UsernameEt = (EditText)findViewById(R.id.UName);
+        PasswordEt = (EditText)findViewById(R.id.Password);
 
     }
 
@@ -22,7 +27,17 @@ public class LoginActivity extends AppCompatActivity {
 
     public void NavigateToUseXP(View view)
     {
-        Intent intent = new Intent(this, XperienceActivity.class);
-        startActivity(intent);
+        String username = UsernameEt.getText().toString();
+        String password = PasswordEt.getText().toString();
+        String type = "login";
+        System.out.println("User Name" + username);
+        BackgroundWork backgroundWork = new BackgroundWork(this);
+        backgroundWork.execute(type,username,password);
+        System.out.println("result:" + backgroundWork.result);
+//        here to print the value of result and use to for check below:
+        if (backgroundWork.result != null) {
+            Intent intent = new Intent(this, XperienceActivity.class);
+            startActivity(intent);
+        }
     }
 }
