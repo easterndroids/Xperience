@@ -33,11 +33,8 @@ public class LoginActivity extends AppCompatActivity {
         System.out.println("User Name" + username);
         BackgroundWork backgroundWork = new BackgroundWork(this);
         backgroundWork.execute(type,username,password);
-        System.out.println("result:" + backgroundWork.result);
-//        here to print the value of result and use to for check below:
-        if (backgroundWork.result != null) {
-            Intent intent = new Intent(this, XperienceActivity.class);
-            startActivity(intent);
-        }
+//        System.out.println("result:" + backgroundWork.result);
+//        Intent intent = new Intent(this, XperienceActivity.class);
+//        startActivity(intent);
     }
 }

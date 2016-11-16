@@ -88,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="d7d05330e71df7f65d62e9be637594f5c2b91fff">
+        sha1="d83dfc8b8a251b1414f445e3fdd6c4038829a5df">
         <dex dex="/Users/zhuangyuan/xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_b5ae88082ac10ddf81b85639e6532467b7f77bec/classes.dex" />
     </item>
     <item
@@ -169,7 +169,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="99da743f037836875980634757ac0e08e75f5846">
+        sha1="a70ead1fdc643007118bd6c087e1bd45d07c3f54">
         <dex dex="/Users/zhuangyuan/xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5b92752f0e33c6d0c3ba44f334cb99f211b723ab/classes.dex" />
     </item>
     <item
