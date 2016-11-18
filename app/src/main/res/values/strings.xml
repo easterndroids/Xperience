@@ -2,4 +2,7 @@
     <string name="app_name">Xperience</string>
     <string name="title_activity_xperience">MainActivity</string>
     <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_user_gallery">UserGalleryActivity</string>
+    <string name="title_activity_grid_view_adapter">GridViewAdapter</string>
+    <string name="title_activity_view_image">ViewImage</string>
 </resources>

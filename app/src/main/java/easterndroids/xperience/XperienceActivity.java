@@ -31,11 +31,16 @@ public class XperienceActivity extends AppCompatActivity {
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        /*fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, NavigateToUserGalleryView(view), Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+            }
+        });*/
+        fab.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                NavigateToUserGalleryView(v);
             }
         });
         if (getSupportActionBar() != null)
@@ -46,6 +51,12 @@ public class XperienceActivity extends AppCompatActivity {
     public boolean onTouchEvent(MotionEvent event) {
         this.gestureObject.onTouchEvent(event);
         return super.onTouchEvent(event);
+    }
+
+    public void NavigateToUserGalleryView(View view)
+    {
+        Intent intent = new Intent(this, UserGalleryActivity.class);
+        startActivity(intent);
     }
 
     class LearnGesture extends GestureDetector.SimpleOnGestureListener{

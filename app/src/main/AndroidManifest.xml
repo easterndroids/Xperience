@@ -3,6 +3,9 @@
     package="easterndroids.xperience">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -52,6 +55,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--
+            <activity
+            android:name=".GridViewAdapter"
+            android:label="@string/title_activity_grid_view_adapter"
+            android:theme="@style/AppTheme.NoActionBar" />
+        -->
+        <activity
+            android:name=".UserGalleryActivity"
+            android:label="@string/title_activity_user_gallery"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".gridview_item" />
+        <activity android:name=".ViewImage"></activity>
     </application>
 
 </manifest>
