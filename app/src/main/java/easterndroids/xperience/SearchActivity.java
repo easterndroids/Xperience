@@ -20,10 +20,10 @@ public class SearchActivity extends AppCompatActivity {
 
     private GestureDetectorCompat gestureObject;
 
-    String urlAddress="http://xperience.x10host.com/searcher.php";
-    SearchView sv;
-    ListView lv;
-    ImageView noDataImg,noNetworkImg;
+//    String urlAddress="http://xperience.x10host.com/searcher.php";
+//    SearchView sv;
+//    ListView lv;
+//    ImageView noDataImg,noNetworkImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,27 +43,27 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
 
-        lv = (ListView) findViewById(R.id.lv);
-        sv = (SearchView) findViewById(R.id.sv);
-        noDataImg = (ImageView) findViewById(R.id.nodataImg);
-        noNetworkImg = (ImageView) findViewById(R.id.noserver);
-
-        sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                SenderReceiver sr = new SenderReceiver(SearchActivity.this,urlAddress,query,lv,noDataImg,noNetworkImg);
-                sr.execute();
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String query) {
-                SenderReceiver sr = new SenderReceiver(SearchActivity.this,urlAddress,query,lv,noDataImg,noNetworkImg);
-                sr.execute();
-
-                return false;
-            }
-        });
+//        lv = (ListView) findViewById(R.id.lv);
+//        sv = (SearchView) findViewById(R.id.sv);
+//        noDataImg = (ImageView) findViewById(R.id.nodataImg);
+//        noNetworkImg = (ImageView) findViewById(R.id.noserver);
+//
+//        sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                SenderReceiver sr = new SenderReceiver(SearchActivity.this,urlAddress,query,lv,noDataImg,noNetworkImg);
+//                sr.execute();
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String query) {
+//                SenderReceiver sr = new SenderReceiver(SearchActivity.this,urlAddress,query,lv,noDataImg,noNetworkImg);
+//                sr.execute();
+//
+//                return false;
+//            }
+//        });
 
 
     }
