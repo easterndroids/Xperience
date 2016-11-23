@@ -1,35 +1,36 @@
 package easterndroids.xperience;
 
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.Intent;
+
+
 import android.graphics.Bitmap;
-import android.graphics.Camera;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.FileProvider;
+
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
+
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 import java.io.File;
+
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class UserGalleryActivity extends AppCompatActivity {
 
-    ImageView ImgView;
     static final int REQUEST_IMAGE_CAPTURE = 1;
-    static final int REQUEST_TAKE_PHOTO = 1;
     SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
     Date now = new Date();
     String fileName = "JPEG_"+formatter.format(now) + ".jpg";
@@ -39,25 +40,17 @@ public class UserGalleryActivity extends AppCompatActivity {
     GridView grid;
     GridViewAdapter adapter;
     File file;
-    String mCurrentPhotoPath;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        Intent intent = getIntent();
         setContentView(R.layout.activity_user_gallery);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        /*fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
         fab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 dispatchTakePictureIntent();
@@ -68,19 +61,6 @@ public class UserGalleryActivity extends AppCompatActivity {
             Toast.makeText(this, "Error! No SDCARD Found!", Toast.LENGTH_LONG)
                     .show();
         } else {
-            // Locate the image folder in your SD Card
-            /*file = new File(Environment.getExternalStorageDirectory()
-                    + File.separator + "Xperience");
-            // Create a new folder if no folder named SDImageTutorial exist
-            boolean success = true;
-            success = file.mkdirs();
-
-            if (success) {
-                System.out.println("Success:"+success);
-            } else {
-                System.out.println("Failure:"+success);
-            }*/
-
             String fullPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Xperience/";
             boolean success = true;
             try
@@ -152,109 +132,52 @@ public class UserGalleryActivity extends AppCompatActivity {
 
     }
 
-    public void AccessCamera(View view)
-    {
-
-    }
-
-    private File getFile()
-    {
-        File folder = new File("/storage/emulated/0/Xperience/");
-        if (!folder.exists())
-        {
-            folder.mkdir();
-        }
-
-        File image_file = new File(folder,fileName);
-        System.out.println("Absolute Path: "+image_file);
-
-        return image_file;
-    }
-    /*@Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
-        System.out.println("In onActivityResult Function");
-        String path = "/storage/emulated/0/Xperience/"+fileName;
-        ImgView.setImageDrawable(Drawable.createFromPath(path));
-
-
-    }*/
-
-    /*private void dispatchTakePictureIntent() {
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-        }
-    }*/
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         System.out.println("Request Code: "+requestCode);
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            /*Bundle extras = data.getExtras();
+            Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            ImgView.setImageBitmap(imageBitmap);*/
+
+            String StoredPath = saveToInternalStorage(imageBitmap);
+            System.out.println("StoredPath: "+StoredPath);
             Intent intent = new Intent(this, UserGalleryActivity.class);
             startActivity(intent);
         }
     }
 
+    private String saveToInternalStorage(Bitmap bitmapImage){
+        ContextWrapper cw = new ContextWrapper(getApplicationContext());
+        // path to /data/data/yourapp/app_data/imageDir
+        //File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
+        File directory = new File("/storage/emulated/0/Xperience/");
+        // Create imageDir
+        File mypath=new File(directory,fileName);
+
+        FileOutputStream fos = null;
+        try {
+            bitmapImage = BitmapFactory.decodeStream(getAssets().open("1024x768.jpg"));
+            fos = new FileOutputStream(mypath);
+            // Use the compress method on the BitMap object to write image to the OutputStream
+            bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, fos);
+            System.out.println("SavedPath: "+mypath.getAbsolutePath());
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Error..");
+        } finally {
+            try {
+                fos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return directory.getAbsolutePath();
+    }
+
     public void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            File dir = new File(Environment.getRootDirectory().getAbsolutePath()+"/Xperience");
-            System.out.println("New Path: "+Environment.getRootDirectory().getAbsolutePath()+"/Xperience");
-            File photoFile=new File(dir, fileName);
-            System.out.println("Photo Path: "+photoFile.getAbsolutePath()+"/Xperience");
-            if (photoFile != null)
-            {
-                Uri photoURI = FileProvider.getUriForFile(this, "easterndroids.xperience.android.fileprovider", photoFile);
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
-                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
-            }
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
     }
-    /*private void dispatchTakePictureIntent() {
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        // Ensure that there's a camera activity to handle the intent
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            // Create the File where the photo should go
-            File photoFile = null;
-            //photoFile = getFile();
-            File imagePath = new File(getFilesDir(), "Xperience");
-            //File imagePath = new File("/storage/emulated/0/Xperience/");
-            photoFile = new File(imagePath, fileName);
-            System.out.println("PF AP: "+photoFile.getPath());
-
-            // Continue only if the File was successfully created
-            if (photoFile != null) {
-                Uri photoURI = FileProvider.getUriForFile(this, "easterndroids.xperience.android.fileprovider", photoFile);
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
-                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
-
-
-            }
-        }
-    }*/
-
-    private File createImageFile() throws IOException {
-        // Create an image file name
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = "JPEG_" + timeStamp + "_";
-        File storageDir = new File(getFilesDir(), "Xperience");
-        //File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-        //File storageDir = new File("/storage/emulated/0/Xperience/");
-        File image = File.createTempFile(
-                imageFileName,  /* prefix */
-                ".jpg",         /* suffix */
-                storageDir      /* directory */
-        );
-
-        // Save a file: path for use with ACTION_VIEW intents
-        mCurrentPhotoPath = image.getAbsolutePath();
-        System.out.println("Absolute Path: "+mCurrentPhotoPath);
-        return image;
-    }
-
 }
