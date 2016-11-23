@@ -1,30 +1,18 @@
 package easterndroids.xperience;
 
-import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
-
-
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
-
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
-
 import android.widget.GridView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
-
 import java.io.File;
-
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -33,7 +21,7 @@ public class UserGalleryActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
     Date now = new Date();
-    String fileName = "JPEG_"+formatter.format(now) + ".jpg";
+    public String fileName = "JPEG_"+formatter.format(now) + ".jpg";
     private String[] FilePathStrings;
     private String[] FileNameStrings;
     private File[] listFile;
@@ -136,46 +124,14 @@ public class UserGalleryActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         System.out.println("Request Code: "+requestCode);
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-
-            String StoredPath = saveToInternalStorage(imageBitmap);
-            System.out.println("StoredPath: "+StoredPath);
-            Intent intent = new Intent(this, UserGalleryActivity.class);
-            startActivity(intent);
+            Intent GalleryIntent = new Intent(this, UserGalleryActivity.class);
+            startActivity(GalleryIntent);
         }
-    }
-
-    private String saveToInternalStorage(Bitmap bitmapImage){
-        ContextWrapper cw = new ContextWrapper(getApplicationContext());
-        // path to /data/data/yourapp/app_data/imageDir
-        //File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
-        File directory = new File("/storage/emulated/0/Xperience/");
-        // Create imageDir
-        File mypath=new File(directory,fileName);
-
-        FileOutputStream fos = null;
-        try {
-            bitmapImage = BitmapFactory.decodeStream(getAssets().open("1024x768.jpg"));
-            fos = new FileOutputStream(mypath);
-            // Use the compress method on the BitMap object to write image to the OutputStream
-            bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, fos);
-            System.out.println("SavedPath: "+mypath.getAbsolutePath());
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("Error..");
-        } finally {
-            try {
-                fos.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return directory.getAbsolutePath();
     }
 
     public void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, MyFileContentProvider.CONTENT_URI);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }

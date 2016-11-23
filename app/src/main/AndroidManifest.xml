@@ -72,14 +72,10 @@
         <activity android:name=".gridview_item" />
         <activity android:name=".ViewImage"></activity>
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name=".MyFileContentProvider"
             android:authorities="easterndroids.xperience.android.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"></meta-data>
-        </provider>
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>
