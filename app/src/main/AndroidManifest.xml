@@ -6,10 +6,13 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.STORAGE" />
-    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
 
     <application
         android:allowBackup="true"
@@ -70,12 +73,14 @@
             android:label="@string/title_activity_user_gallery"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".gridview_item" />
-        <activity android:name=".ViewImage"></activity>
+        <activity android:name=".ViewImage" />
+
         <provider
             android:name=".MyFileContentProvider"
             android:authorities="easterndroids.xperience.android.fileprovider"
             android:enabled="true"
             android:exported="true" />
+
     </application>
 
 </manifest>

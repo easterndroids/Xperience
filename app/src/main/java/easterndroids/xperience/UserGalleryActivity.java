@@ -34,6 +34,9 @@ public class UserGalleryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        /*Intent intent = getIntent();
+        finish();
+        startActivity(intent);*/
         setContentView(R.layout.activity_user_gallery);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -125,15 +128,25 @@ public class UserGalleryActivity extends AppCompatActivity {
         System.out.println("Request Code: "+requestCode);
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Intent GalleryIntent = new Intent(this, UserGalleryActivity.class);
+            finish();
+            //GalleryIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             startActivity(GalleryIntent);
         }
     }
 
     public void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        MyFileContentProvider MFCP = new MyFileContentProvider();
         takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, MyFileContentProvider.CONTENT_URI);
+        //takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, MFCP.getContentURI());
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
+    }
+
+    @Override
+
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }

@@ -7,6 +7,8 @@ import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 
 /**
@@ -16,10 +18,15 @@ import java.util.HashMap;
 
 public class MyFileContentProvider extends ContentProvider {
     UserGalleryActivity UGA = new UserGalleryActivity();
-    public String fileName = UGA.fileName;
-
-    public static final Uri CONTENT_URI = Uri.parse("content://easterndroids.xperience.android.fileprovider/");
-
+    public String fileName;
+    SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+    Date now = new Date();
+    String TimeStampedFileName = "JPEG_"+formatter.format(now) + ".jpg";
+    public static Uri CONTENT_URI = Uri.parse("content://easterndroids.xperience.android.fileprovider/");
+    public static Uri getContentURI()
+    {
+        return Uri.parse("content://easterndroids.xperience.android.fileprovider/");
+    }
     private static final HashMap<String, String> MIME_TYPES = new HashMap<String, String>();
 
     static {
@@ -35,15 +42,22 @@ public class MyFileContentProvider extends ContentProvider {
     public boolean onCreate() {
 
         try {
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+            Date now = new Date();
+            String TimeStampedFileName = "JPEG_"+formatter.format(now) + ".jpg";
+            fileName = TimeStampedFileName;
+            File mFile = new File("/storage/emulated/0/Xperience/", TimeStampedFileName);
 
-            File mFile = new File("/storage/emulated/0/Xperience/", fileName);
-
-            if(!mFile.exists()) {
-
+            if(!mFile.exists())
+            {
+                System.out.println("mFile not Exists");
                 mFile.createNewFile();
-
             }
-
+            else
+            {
+                System.out.println("mFile Exists");
+            }
+            System.out.println("Created File: "+ mFile.getAbsolutePath()+" "+ mFile.getName());
             getContext().getContentResolver().notifyChange(CONTENT_URI, null);
 
             return (true);
@@ -51,7 +65,7 @@ public class MyFileContentProvider extends ContentProvider {
         } catch (Exception e) {
 
             e.printStackTrace();
-
+            System.out.println("Error: "+e.getMessage());
             return false;
 
         }
