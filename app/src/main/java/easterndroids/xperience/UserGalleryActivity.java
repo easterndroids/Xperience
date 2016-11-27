@@ -28,12 +28,14 @@ public class UserGalleryActivity extends AppCompatActivity {
     GridView grid;
     GridViewAdapter adapter;
     File file;
+    public static String uname = "";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        uname = getIntent().getStringExtra("uname");
         /*Intent intent = getIntent();
         finish();
         startActivity(intent);*/
@@ -116,6 +118,7 @@ public class UserGalleryActivity extends AppCompatActivity {
                 i.putExtra("filename", FileNameStrings);
                 // Pass click position
                 i.putExtra("position", position);
+                i.putExtra("uname", uname);
                 startActivity(i);
             }
 
@@ -128,6 +131,7 @@ public class UserGalleryActivity extends AppCompatActivity {
         System.out.println("Request Code: "+requestCode);
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Intent GalleryIntent = new Intent(this, UserGalleryActivity.class);
+            GalleryIntent.putExtra("uname", uname);
             finish();
             //GalleryIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             startActivity(GalleryIntent);

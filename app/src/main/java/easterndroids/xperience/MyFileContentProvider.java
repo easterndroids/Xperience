@@ -2,6 +2,7 @@ package easterndroids.xperience;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
@@ -10,6 +11,8 @@ import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+
+import static android.R.attr.password;
 
 /**
  * Created by ghvk1 on 2016-11-23.
@@ -23,6 +26,7 @@ public class MyFileContentProvider extends ContentProvider {
     Date now = new Date();
     String TimeStampedFileName = "JPEG_"+formatter.format(now) + ".jpg";
     public static Uri CONTENT_URI = Uri.parse("content://easterndroids.xperience.android.fileprovider/");
+    public static String uname = UserGalleryActivity.uname;
     public static Uri getContentURI()
     {
         return Uri.parse("content://easterndroids.xperience.android.fileprovider/");
@@ -52,11 +56,16 @@ public class MyFileContentProvider extends ContentProvider {
             {
                 System.out.println("mFile not Exists");
                 mFile.createNewFile();
+                String type = "Moment Insert";
+                Context ctx = getContext();
+                BackgroundWork backgroundWork = new BackgroundWork(ctx);
+                backgroundWork.execute(type,uname,"");
             }
             else
             {
                 System.out.println("mFile Exists");
             }
+
             System.out.println("Created File: "+ mFile.getAbsolutePath()+" "+ mFile.getName());
             getContext().getContentResolver().notifyChange(CONTENT_URI, null);
 

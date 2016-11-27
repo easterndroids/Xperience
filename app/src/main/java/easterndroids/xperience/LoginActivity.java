@@ -1,7 +1,6 @@
 package easterndroids.xperience;
 
 import android.content.Intent;
-import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,7 +29,6 @@ public class LoginActivity extends AppCompatActivity {
         String username = UsernameEt.getText().toString();
         String password = PasswordEt.getText().toString();
         String type = "login";
-        System.out.println("User Name" + username);
         BackgroundWork backgroundWork = new BackgroundWork(this);
         backgroundWork.execute(type,username,password);
 //        System.out.println("result:" + backgroundWork.result);

@@ -21,11 +21,12 @@ public class XperienceActivity extends AppCompatActivity  {
 
 
     private GestureDetectorCompat gestureObject;
-
+    public String uname = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        uname = getIntent().getStringExtra("uname");
         setContentView(R.layout.activity_xperience);
 
         gestureObject = new GestureDetectorCompat(this, new LearnGesture());
@@ -59,6 +60,7 @@ public class XperienceActivity extends AppCompatActivity  {
     public void NavigateToUserGalleryView(View view)
     {
         Intent intent = new Intent(this, UserGalleryActivity.class);
+        intent.putExtra("uname",uname);
         startActivity(intent);
     }
 
@@ -69,6 +71,7 @@ public class XperienceActivity extends AppCompatActivity  {
             if(e2.getX() > e1.getX()){
                 //left to right swipe navigate to search activity
                 Intent intent = new Intent(XperienceActivity.this, SearchActivity.class);
+                intent.putExtra("uname",uname);
                 finish();
                 startActivity(intent);
             }

@@ -2,6 +2,8 @@ package easterndroids.xperience;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.location.Criteria;
+import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -30,6 +32,7 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
     BackgroundWork(Context ctx) {
         context = ctx;
     }
+    public String uname = "";
 
 //    private final Activity mActivity;
 //
@@ -40,6 +43,7 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
     @Override
     protected String doInBackground(String... params) {
         String type = params[0];
+        uname = params[1];
         String login_url = "http://xperience.x10host.com/login.php";
         if (type.equals("login")){
             try {
@@ -76,24 +80,81 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
             }
 
         }
+        if (type.equals("Moment Insert"))
+        {
+            //try
+            String Latitude="";
+            String Longitude="";
+            {
+                GPSTracker gps = new GPSTracker(context);
+                if(gps.canGetLocation()){
+                    Latitude = Double.toString(gps.getLatitude());
+                    Longitude = Double.toString(gps.getLongitude());
+                    System.out.println("Can get Location");
+                    // \n is for new line
+                }else{
+                    // can't get location
+                    // GPS or Network is not enabled
+                    // Ask user to enable GPS/network in settings
+                    System.out.println("Can't get Location");
+                    gps.showSettingsAlert();
+                }
+                System.out.println("Latitude: "+Latitude+" Longitude: "+Longitude);
+                return "login success";
+                /*URL url = new URL("http://xperience.x10host.com/MomentInsert.php");
+                HttpURLConnection httpURLConnection =(HttpURLConnection)url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream,"UTF-8"));
+                String post_data = URLEncoder.encode("user_name","UTF-8")+"="+URLEncoder.encode(uname,"UTF-8")+"&"+URLEncoder.encode("latitude","UTF-8")+"="+URLEncoder.encode(Double.toString(Latitude),"UTF-8")+"&"+URLEncoder.encode("longitude","UTF-8")+"="+URLEncoder.encode(Double.toString(Longitude),"UTF-8");
+                bufferedWriter.write(post_data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream,"iso-8859-1"));
+                String result = "";
+                String line;
+                while ((line = bufferedReader.readLine())!= null){
+                    result += line;
+                }
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                return result;*/
+            }
+            /*catch (MalformedURLException e)
+            {
+                e.printStackTrace();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }*/
+
+        }
         return null;
     }
 
     @Override
     protected void onPreExecute() {
         alertDialog = new AlertDialog.Builder(context).create();
-        alertDialog.setTitle("Login Status");
+        alertDialog.setTitle("Status");
 
     }
 
     @Override
     protected  void onPostExecute(String result) {
-        alertDialog.setMessage(result);
-        alertDialog.show();
+        //alertDialog.setMessage(result);
+        //alertDialog.show();
 
         Log.d("result:",result);
         if(result.equals("login success")){
-            context.startActivities(new Intent[]{new Intent(context, XperienceActivity.class)});
+            Intent XPActivityIntent = new Intent(context, XperienceActivity.class);
+            XPActivityIntent.putExtra("uname", uname);
+            //context.startActivities(new Intent[]{new Intent(context, XperienceActivity.class)});
+            context.startActivity(XPActivityIntent);
         }
 
 
