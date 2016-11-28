@@ -1,6 +1,8 @@
 package easterndroids.xperience;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -10,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import java.io.File;
@@ -29,12 +32,14 @@ public class UserGalleryActivity extends AppCompatActivity {
     GridViewAdapter adapter;
     File file;
     public static String uname = "";
+    public ImageView imageView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        imageView = (ImageView) findViewById (R.id.image_view_bmp);
         uname = getIntent().getStringExtra("uname");
         /*Intent intent = getIntent();
         finish();
@@ -128,13 +133,15 @@ public class UserGalleryActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        System.out.println("Request Code: "+requestCode);
+        System.out.println("Request Code: "+data);
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Intent GalleryIntent = new Intent(this, UserGalleryActivity.class);
-            GalleryIntent.putExtra("uname", uname);
-            finish();
+            setPic();
+            //Intent GalleryIntent = new Intent(this, UserGalleryActivity.class);
+            //GalleryIntent.putExtra("uname", uname);
+            //finish();
             //GalleryIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-            startActivity(GalleryIntent);
+            //startActivity(GalleryIntent);
+
         }
     }
 
@@ -152,5 +159,35 @@ public class UserGalleryActivity extends AppCompatActivity {
 
     protected void onDestroy() {
         super.onDestroy();
+    }
+
+    private void setPic() {
+        // Get the dimensions of the View
+        //int targetW = imageView.getWidth();
+        //int targetH = imageView.getHeight();
+        int targetH = 100;
+        int targetW = 100;
+        // Get the dimensions of the bitmap
+        BitmapFactory.Options bmOptions = new BitmapFactory.Options();
+        bmOptions.inJustDecodeBounds = true;
+        MyFileContentProvider MFCP = new MyFileContentProvider();
+        BitmapFactory.decodeFile(MFCP.GlobalPath, bmOptions);
+        int photoW = bmOptions.outWidth;
+        int photoH = bmOptions.outHeight;
+
+        // Determine how much to scale down the image
+        int scaleFactor = Math.min(photoW/targetW, photoH/targetH);
+
+        // Decode the image file into a Bitmap sized to fill the View
+        bmOptions.inJustDecodeBounds = false;
+        bmOptions.inSampleSize = scaleFactor;
+        bmOptions.inPurgeable = true;
+
+        Bitmap bitmap = BitmapFactory.decodeFile(MFCP.GlobalPath, bmOptions);
+        Intent TagViewIntent = new Intent(this, AddTags.class);
+        TagViewIntent.putExtra("bitmap", bitmap);
+        TagViewIntent.putExtra("uname", uname);
+        startActivity(TagViewIntent);
+        //imageView.setImageBitmap(bitmap);
     }
 }

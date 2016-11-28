@@ -2,15 +2,18 @@ package easterndroids.xperience;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.location.Criteria;
 import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -82,9 +85,10 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
         }
         if (type.equals("Moment Insert"))
         {
-            //try
+
             String Latitude="";
             String Longitude="";
+            try
             {
                 GPSTracker gps = new GPSTracker(context);
                 if(gps.canGetLocation()){
@@ -100,15 +104,17 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
                     gps.showSettingsAlert();
                 }
                 System.out.println("Latitude: "+Latitude+" Longitude: "+Longitude);
-                return "login success";
-                /*URL url = new URL("http://xperience.x10host.com/MomentInsert.php");
+                MyFileContentProvider MFCP = new MyFileContentProvider();
+                String uploadImage = getStringImage(MFCP.bitmap);
+                System.out.println("Upload Image: "+uploadImage);
+                URL url = new URL("http://xperience.x10host.com/momentinsert.php");
                 HttpURLConnection httpURLConnection =(HttpURLConnection)url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
                 httpURLConnection.setDoInput(true);
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream,"UTF-8"));
-                String post_data = URLEncoder.encode("user_name","UTF-8")+"="+URLEncoder.encode(uname,"UTF-8")+"&"+URLEncoder.encode("latitude","UTF-8")+"="+URLEncoder.encode(Double.toString(Latitude),"UTF-8")+"&"+URLEncoder.encode("longitude","UTF-8")+"="+URLEncoder.encode(Double.toString(Longitude),"UTF-8");
+                String post_data = URLEncoder.encode("user_name","UTF-8")+"="+URLEncoder.encode(uname,"UTF-8")+"&"+URLEncoder.encode("latitude","UTF-8")+"="+URLEncoder.encode(Latitude,"UTF-8")+"&"+URLEncoder.encode("longitude","UTF-8")+"="+URLEncoder.encode(Longitude,"UTF-8")+"&"+URLEncoder.encode("image","UTF-8")+"="+uploadImage;
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -123,15 +129,15 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
                 bufferedReader.close();
                 inputStream.close();
                 httpURLConnection.disconnect();
-                return result;*/
+                return result;
             }
-            /*catch (MalformedURLException e)
+            catch (MalformedURLException e)
             {
                 e.printStackTrace();
             }
             catch (IOException e) {
                 e.printStackTrace();
-            }*/
+            }
 
         }
         return null;
@@ -148,13 +154,20 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
     protected  void onPostExecute(String result) {
         //alertDialog.setMessage(result);
         //alertDialog.show();
-
-        Log.d("result:",result);
-        if(result.equals("login success")){
-            Intent XPActivityIntent = new Intent(context, XperienceActivity.class);
-            XPActivityIntent.putExtra("uname", uname);
-            //context.startActivities(new Intent[]{new Intent(context, XperienceActivity.class)});
-            context.startActivity(XPActivityIntent);
+        if (result != null)
+        {
+            Log.d("result:", result);
+            if (result.equals("login success")) {
+                Intent XPActivityIntent = new Intent(context, XperienceActivity.class);
+                XPActivityIntent.putExtra("uname", uname);
+                //context.startActivities(new Intent[]{new Intent(context, XperienceActivity.class)});
+                context.startActivity(XPActivityIntent);
+            } else if (result.equals("insertion success")) {
+                Intent XPActivityIntent = new Intent(context, UserGalleryActivity.class);
+                XPActivityIntent.putExtra("uname", uname);
+                //context.startActivities(new Intent[]{new Intent(context, XperienceActivity.class)});
+                context.startActivity(XPActivityIntent);
+            }
         }
 
 
@@ -163,5 +176,17 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
     @Override
     protected void onProgressUpdate(Void... values) {
         super.onProgressUpdate(values);
+    }
+
+    public String getStringImage(Bitmap bmp){
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        String result = "";
+        if (bmp != null) {
+            bmp.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+            byte[] imageBytes = baos.toByteArray();
+            String encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
+            result =  encodedImage;
+        }
+        return result;
     }
 }

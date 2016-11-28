@@ -4,8 +4,14 @@ import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
+import android.provider.MediaStore;
+import android.util.Base64;
+import android.widget.ImageView;
+
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
@@ -22,11 +28,14 @@ import static android.R.attr.password;
 public class MyFileContentProvider extends ContentProvider {
     UserGalleryActivity UGA = new UserGalleryActivity();
     public String fileName;
+
+    public static Bitmap bitmap;
     SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
     Date now = new Date();
     String TimeStampedFileName = "JPEG_"+formatter.format(now) + ".jpg";
     public static Uri CONTENT_URI = Uri.parse("content://easterndroids.xperience.android.fileprovider/");
     public static String uname = UserGalleryActivity.uname;
+    public static String GlobalPath = "";
     public static Uri getContentURI()
     {
         return Uri.parse("content://easterndroids.xperience.android.fileprovider/");
@@ -46,6 +55,7 @@ public class MyFileContentProvider extends ContentProvider {
     public boolean onCreate() {
 
         try {
+
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
             Date now = new Date();
             String TimeStampedFileName = "JPEG_"+formatter.format(now) + ".jpg";
@@ -56,6 +66,9 @@ public class MyFileContentProvider extends ContentProvider {
             {
                 System.out.println("mFile not Exists");
                 mFile.createNewFile();
+                GlobalPath = mFile.getAbsolutePath();
+                android.net.Uri urifile = android.net.Uri.parse(mFile.toURI().toString());
+                bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver() , urifile);
                 String type = "Moment Insert";
                 Context ctx = getContext();
                 BackgroundWork backgroundWork = new BackgroundWork(ctx);
