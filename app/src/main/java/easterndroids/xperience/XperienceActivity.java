@@ -3,33 +3,37 @@ package easterndroids.xperience;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.GestureDetectorCompat;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.GestureDetector;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 
-public class XperienceActivity extends AppCompatActivity {
+public class XperienceActivity extends AppCompatActivity  {
 
 
     private GestureDetectorCompat gestureObject;
-
+    public String uname = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        uname = getIntent().getStringExtra("uname");
         setContentView(R.layout.activity_xperience);
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
 
-        gestureObject = new GestureDetectorCompat(this,new LearnGesture());
+        gestureObject = new GestureDetectorCompat(this, new LearnGesture());
 
 
-
-
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         /*fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,8 +47,8 @@ public class XperienceActivity extends AppCompatActivity {
                 NavigateToUserGalleryView(v);
             }
         });
-        if (getSupportActionBar() != null)
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        /*if (getSupportActionBar() != null)
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
     }
 
     @Override
@@ -56,6 +60,7 @@ public class XperienceActivity extends AppCompatActivity {
     public void NavigateToUserGalleryView(View view)
     {
         Intent intent = new Intent(this, UserGalleryActivity.class);
+        intent.putExtra("uname",uname);
         startActivity(intent);
     }
 
@@ -66,6 +71,7 @@ public class XperienceActivity extends AppCompatActivity {
             if(e2.getX() > e1.getX()){
                 //left to right swipe navigate to search activity
                 Intent intent = new Intent(XperienceActivity.this, SearchActivity.class);
+                intent.putExtra("uname",uname);
                 finish();
                 startActivity(intent);
             }

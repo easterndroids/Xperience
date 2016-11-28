@@ -3,8 +3,8 @@ package easterndroids.xperience;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -12,32 +12,41 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
-
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class UserGalleryActivity extends AppCompatActivity {
 
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+    SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+    Date now = new Date();
+    public String fileName = "JPEG_"+formatter.format(now) + ".jpg";
     private String[] FilePathStrings;
     private String[] FileNameStrings;
     private File[] listFile;
     GridView grid;
     GridViewAdapter adapter;
     File file;
+    public static String uname = "";
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        Intent intent = getIntent();
+        uname = getIntent().getStringExtra("uname");
+        /*Intent intent = getIntent();
+        finish();
+        startActivity(intent);*/
         setContentView(R.layout.activity_user_gallery);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+                dispatchTakePictureIntent();
             }
         });
         if (!Environment.getExternalStorageState().equals(
@@ -45,19 +54,6 @@ public class UserGalleryActivity extends AppCompatActivity {
             Toast.makeText(this, "Error! No SDCARD Found!", Toast.LENGTH_LONG)
                     .show();
         } else {
-            // Locate the image folder in your SD Card
-            /*file = new File(Environment.getExternalStorageDirectory()
-                    + File.separator + "Xperience");
-            // Create a new folder if no folder named SDImageTutorial exist
-            boolean success = true;
-            success = file.mkdirs();
-
-            if (success) {
-                System.out.println("Success:"+success);
-            } else {
-                System.out.println("Failure:"+success);
-            }*/
-
             String fullPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Xperience/";
             boolean success = true;
             try
@@ -122,6 +118,7 @@ public class UserGalleryActivity extends AppCompatActivity {
                 i.putExtra("filename", FileNameStrings);
                 // Pass click position
                 i.putExtra("position", position);
+                i.putExtra("uname", uname);
                 startActivity(i);
             }
 
@@ -129,4 +126,31 @@ public class UserGalleryActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        System.out.println("Request Code: "+requestCode);
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Intent GalleryIntent = new Intent(this, UserGalleryActivity.class);
+            GalleryIntent.putExtra("uname", uname);
+            finish();
+            //GalleryIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+            startActivity(GalleryIntent);
+        }
+    }
+
+    public void dispatchTakePictureIntent() {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        MyFileContentProvider MFCP = new MyFileContentProvider();
+        takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, MyFileContentProvider.CONTENT_URI);
+        //takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, MFCP.getContentURI());
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        }
+    }
+
+    @Override
+
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }
