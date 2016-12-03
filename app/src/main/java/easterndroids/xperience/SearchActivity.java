@@ -1,14 +1,18 @@
 package easterndroids.xperience;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,6 +36,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     private static final String JSON_ARRAY ="result";
     private static final String IMAGE_URL = "url";
     private EditText et;
+    public String uname = "";
 
     private JSONArray arrayImages= null;
 
@@ -43,13 +48,14 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     private Button buttonMoveNext;
     private Button buttonMovePrevious;
     private ImageView imageView;
-
+    private GestureDetectorCompat gestureObject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        uname = getIntent().getStringExtra("uname");
         setContentView(R.layout.activity_search);
-
+        gestureObject = new GestureDetectorCompat(this, new LearnGesture());
         imageView = (ImageView) findViewById(R.id.imageView);
         et = (EditText) findViewById(R.id.sv);
         buttonFetchImages = (FloatingActionButton) findViewById(R.id.fab);
@@ -190,6 +196,30 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         }
         if(v== buttonMovePrevious){
             movePrevious();
+        }
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        this.gestureObject.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
+
+    class LearnGesture extends GestureDetector.SimpleOnGestureListener{
+
+        @Override
+        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+            if(e2.getX() > e1.getX()){
+                //left to right swipe navigate to search activity
+                Intent intent = new Intent(SearchActivity.this, XperienceActivity.class);
+                intent.putExtra("uname",uname);
+                finish();
+                startActivity(intent);
+            }
+
+
+
+            return true;
         }
     }
 }

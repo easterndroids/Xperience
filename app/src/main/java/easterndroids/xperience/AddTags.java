@@ -1,20 +1,29 @@
 package easterndroids.xperience;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
+
+import java.io.ByteArrayOutputStream;
 
 public class AddTags extends AppCompatActivity {
 
     public static String uname="";
+    public Bitmap bitmap;
+    public String image_str;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,12 +44,17 @@ public class AddTags extends AppCompatActivity {
     public void setPicture()
     {
         ImageView imageView = (ImageView) findViewById(R.id.image_view_bmp);
-        Bitmap bitmap = (Bitmap) getIntent().getParcelableExtra("bitmap");
+        bitmap = (Bitmap) getIntent().getParcelableExtra("bitmap");
         imageView.setImageBitmap(bitmap);
     }
 
     public void NavigateToGallery()
     {
+        EditText TagET = (EditText) findViewById(R.id.tagmoment);
+        String Tag = TagET.getText().toString();
+        String type = "Moment Insert";
+        BackgroundWork backgroundWork = new BackgroundWork(this);
+        backgroundWork.execute(type,uname,Tag);
         Intent GalleryIntent = new Intent(this, UserGalleryActivity.class);
         GalleryIntent.putExtra("uname", uname);
         finish();

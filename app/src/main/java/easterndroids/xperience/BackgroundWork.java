@@ -85,7 +85,7 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
         }
         if (type.equals("Moment Insert"))
         {
-
+            String Tag = params[2];
             String Latitude="";
             String Longitude="";
             try
@@ -104,9 +104,9 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
                     gps.showSettingsAlert();
                 }
                 System.out.println("Latitude: "+Latitude+" Longitude: "+Longitude);
-                MyFileContentProvider MFCP = new MyFileContentProvider();
-                String uploadImage = getStringImage(MFCP.bitmap);
-                System.out.println("Upload Image: "+uploadImage);
+                AddTags ATObj = new AddTags();
+                String uploadImage = getStringImage(ATObj.bitmap);
+                System.out.println("Upload Image: "+uploadImage.toString());
                 URL url = new URL("http://xperience.x10host.com/momentinsert.php");
                 HttpURLConnection httpURLConnection =(HttpURLConnection)url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
@@ -114,7 +114,7 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
                 httpURLConnection.setDoInput(true);
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream,"UTF-8"));
-                String post_data = URLEncoder.encode("user_name","UTF-8")+"="+URLEncoder.encode(uname,"UTF-8")+"&"+URLEncoder.encode("latitude","UTF-8")+"="+URLEncoder.encode(Latitude,"UTF-8")+"&"+URLEncoder.encode("longitude","UTF-8")+"="+URLEncoder.encode(Longitude,"UTF-8")+"&"+URLEncoder.encode("image","UTF-8")+"="+uploadImage;
+                String post_data = URLEncoder.encode("user_name","UTF-8")+"="+URLEncoder.encode(uname,"UTF-8")+"&"+URLEncoder.encode("latitude","UTF-8")+"="+URLEncoder.encode(Latitude,"UTF-8")+"&"+URLEncoder.encode("longitude","UTF-8")+"="+URLEncoder.encode(Longitude,"UTF-8")+"&"+URLEncoder.encode("image","UTF-8")+"="+uploadImage+"&"+URLEncoder.encode("tag","UTF-8")+"="+URLEncoder.encode(Tag,"UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -126,6 +126,7 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
                 while ((line = bufferedReader.readLine())!= null){
                     result += line;
                 }
+                System.out.println("Result in Moment Insert: "+result);
                 bufferedReader.close();
                 inputStream.close();
                 httpURLConnection.disconnect();
@@ -134,9 +135,11 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
             catch (MalformedURLException e)
             {
                 e.printStackTrace();
+                System.out.println("Error 1: "+e.getMessage());
             }
             catch (IOException e) {
                 e.printStackTrace();
+                System.out.println("Error 2: "+e.getMessage());
             }
 
         }
@@ -162,7 +165,7 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
                 XPActivityIntent.putExtra("uname", uname);
                 //context.startActivities(new Intent[]{new Intent(context, XperienceActivity.class)});
                 context.startActivity(XPActivityIntent);
-            } else if (result.equals("insertion success")) {
+            } else if (result.contains("insertion success")) {
                 Intent XPActivityIntent = new Intent(context, UserGalleryActivity.class);
                 XPActivityIntent.putExtra("uname", uname);
                 //context.startActivities(new Intent[]{new Intent(context, XperienceActivity.class)});

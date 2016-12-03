@@ -69,10 +69,6 @@ public class MyFileContentProvider extends ContentProvider {
                 GlobalPath = mFile.getAbsolutePath();
                 android.net.Uri urifile = android.net.Uri.parse(mFile.toURI().toString());
                 bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver() , urifile);
-                String type = "Moment Insert";
-                Context ctx = getContext();
-                BackgroundWork backgroundWork = new BackgroundWork(ctx);
-                backgroundWork.execute(type,uname,"");
             }
             else
             {
