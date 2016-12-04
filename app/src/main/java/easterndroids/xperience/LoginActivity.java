@@ -52,9 +52,5 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 finish();
             }
         }, 900);
-
-//        System.out.println("result:" + backgroundWork.result);
-//        Intent intent = new Intent(this, XperienceActivity.class);
-//        startActivity(intent);
     }
 }
