@@ -68,8 +68,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/Register"
                 android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:onClick="NavigateToRegistration (LoginActivity)" />
+                android:layout_marginLeft="20dp" />
 
             <Button
                 android:text="LOGIN"
