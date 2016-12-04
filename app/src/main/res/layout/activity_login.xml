@@ -69,7 +69,7 @@
                 android:id="@+id/Register"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
-                android:onClick="NavigateToRegistration" />
+                android:onClick="NavigateToRegistration (LoginActivity)" />
 
             <Button
                 android:text="LOGIN"

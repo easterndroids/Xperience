@@ -1,6 +1,7 @@
 package easterndroids.xperience;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +32,14 @@ public class LoginActivity extends AppCompatActivity {
         String type = "login";
         BackgroundWork backgroundWork = new BackgroundWork(this);
         backgroundWork.execute(type,username,password);
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                finish();
+            }
+        }, 900);
+
 //        System.out.println("result:" + backgroundWork.result);
 //        Intent intent = new Intent(this, XperienceActivity.class);
 //        startActivity(intent);

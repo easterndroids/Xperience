@@ -1,6 +1,7 @@
 package easterndroids.xperience;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,6 +10,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -29,6 +31,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.DecimalFormat;
 
 public class SearchActivity extends AppCompatActivity implements View.OnClickListener {
     private String imagesJSON;
@@ -47,12 +50,17 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     private FloatingActionButton buttonFetchImages;
     private Button buttonMoveNext;
     private Button buttonMovePrevious;
+    private Button buttonNavigate;
     private ImageView imageView;
     private GestureDetectorCompat gestureObject;
+    public String latitude;
+    public String longitude;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         uname = getIntent().getStringExtra("uname");
         setContentView(R.layout.activity_search);
         gestureObject = new GestureDetectorCompat(this, new LearnGesture());
@@ -64,6 +72,9 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         buttonFetchImages.setOnClickListener(this);
         buttonMoveNext.setOnClickListener(this);
         buttonMovePrevious.setOnClickListener(this);
+
+        buttonNavigate = (Button) findViewById(R.id.buttonNav);
+        buttonNavigate.setOnClickListener(this);
     }
 
 
@@ -76,10 +87,21 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
+    public void Navigate(View view)
+    {
+        Intent intent = new Intent(this, MapsActivity.class);
+        intent.putExtra("uname",uname);
+        startActivity(intent);
+    }
+
     private void showImage(){
         try {
             JSONObject jsonObject = arrayImages.getJSONObject(TRACK);
             getImage(jsonObject.getString(IMAGE_URL));
+            DecimalFormat df = new DecimalFormat();
+            df.setMaximumFractionDigits(15);
+            latitude = jsonObject.getString("latitude");
+            longitude = jsonObject.getString("longitude");
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -99,7 +121,23 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.test_navigation_activty, menu);
 
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = new Intent(SearchActivity.this, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
+        return super.onOptionsItemSelected(item);
+    }
 
     private void getAllImages() {
         class GetAllImages extends AsyncTask<String,Void,String>{
@@ -196,6 +234,11 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         }
         if(v== buttonMovePrevious){
             movePrevious();
+        }
+        if(v== buttonNavigate){
+            Intent intent = new Intent(this, MapsActivity.class);
+            intent.putExtra("uname",uname);
+            startActivity(intent);
         }
     }
 
