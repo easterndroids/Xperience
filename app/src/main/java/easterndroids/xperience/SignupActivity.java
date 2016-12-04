@@ -24,10 +24,9 @@ public class SignupActivity extends AppCompatActivity
 
     @Bind(R.id.input_firstName) EditText _firstNameText;
     @Bind(R.id.input_lastName) EditText _lastNameText;
-    //@Bind(R.id.input_address) EditText _addressText;
     @Bind(R.id.input_email) EditText _emailText;
     @Bind(R.id.input_mobile) EditText _mobileText;
-//    @Bind(R.id.UserName) EditText _Username;
+    @Bind(R.id.UserName) EditText _Username;
     @Bind(R.id.input_password) EditText _passwordText;
     @Bind(R.id.input_reEnterPassword) EditText _reEnterPasswordText;
     @Bind(R.id.btn_signup) Button _signupButton;
@@ -81,13 +80,16 @@ public class SignupActivity extends AppCompatActivity
 
         String firstName = _firstNameText.getText().toString();
         String lastName = _lastNameText.getText().toString();
-        //String address = _addressText.getText().toString();
         String email = _emailText.getText().toString();
         String mobile = _mobileText.getText().toString();
+        String username = _Username.getText().toString();
         String password = _passwordText.getText().toString();
         String reEnterPassword = _reEnterPasswordText.getText().toString();
 
         // TODO: Implementsignup logic here.
+        String type = "register";
+        BackgroundWork backgroundWork = new BackgroundWork(this);
+        backgroundWork.execute(type,firstName,lastName,email,mobile,username,reEnterPassword);
 
         new android.os.Handler().postDelayed(
                 new Runnable()
@@ -124,10 +126,9 @@ public class SignupActivity extends AppCompatActivity
 
         String name = _firstNameText.getText().toString();
         String lastName = _lastNameText.getText().toString();
-        //String address = _addressText.getText().toString();
         String email = _emailText.getText().toString();
         String mobile = _mobileText.getText().toString();
-//        String username = _Username.getText().toString();
+        String username = _Username.getText().toString();
         String password = _passwordText.getText().toString();
         String reEnterPassword = _reEnterPasswordText.getText().toString();
 
@@ -151,25 +152,15 @@ public class SignupActivity extends AppCompatActivity
             _lastNameText.setError(null);
         }
 
-        /*if (address.isEmpty())
+        if (username.isEmpty())
         {
-            _addressText.setError("Enter Valid Address");
+            _Username.setError("Enter Valid Username");
             valid = false;
         }
         else
         {
-            _addressText.setError(null);
-        }*/
-
-//        if (username.isEmpty())
-//        {
-//            _Username.setError("Enter Valid Username");
-//            valid = false;
-//        }
-//        else
-//        {
-//            _Username.setError(null);
-//        }
+            _Username.setError(null);
+        }
 
 
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches())
