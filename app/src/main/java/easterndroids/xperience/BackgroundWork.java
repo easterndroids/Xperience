@@ -36,6 +36,7 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
         context = ctx;
     }
     public String uname = "";
+    public static String uploadImage = "";
 
 //    private final Activity mActivity;
 //
@@ -49,8 +50,8 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
         uname = params[1];
         String login_url = "http://xperience.x10host.com/login.php";
         if (type.equals("login")){
-            try {
-
+            try
+            {
                 String user_name = params[1];
                 String password = params[2];
                 URL url = new URL(login_url);
@@ -104,9 +105,7 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
                     gps.showSettingsAlert();
                 }
                 System.out.println("Latitude: "+Latitude+" Longitude: "+Longitude);
-                AddTags ATObj = new AddTags();
-                String uploadImage = getStringImage(ATObj.bitmap);
-                System.out.println("Upload Image: "+uploadImage.toString());
+                System.out.println("Upload Image: "+uploadImage);
                 URL url = new URL("http://xperience.x10host.com/momentinsert.php");
                 HttpURLConnection httpURLConnection =(HttpURLConnection)url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
@@ -114,7 +113,7 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
                 httpURLConnection.setDoInput(true);
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream,"UTF-8"));
-                String post_data = URLEncoder.encode("user_name","UTF-8")+"="+URLEncoder.encode(uname,"UTF-8")+"&"+URLEncoder.encode("latitude","UTF-8")+"="+URLEncoder.encode(Latitude,"UTF-8")+"&"+URLEncoder.encode("longitude","UTF-8")+"="+URLEncoder.encode(Longitude,"UTF-8")+"&"+URLEncoder.encode("image","UTF-8")+"="+uploadImage+"&"+URLEncoder.encode("tag","UTF-8")+"="+URLEncoder.encode(Tag,"UTF-8");
+                String post_data = URLEncoder.encode("user_name","UTF-8")+"="+URLEncoder.encode(uname,"UTF-8")+"&"+URLEncoder.encode("latitude","UTF-8")+"="+Latitude+"&"+URLEncoder.encode("longitude","UTF-8")+"="+Longitude+"&"+URLEncoder.encode("image","UTF-8")+"="+uploadImage+"&"+URLEncoder.encode("tag","UTF-8")+"="+URLEncoder.encode(Tag,"UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -141,7 +140,6 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
                 e.printStackTrace();
                 System.out.println("Error 2: "+e.getMessage());
             }
-
         }
         return null;
     }
@@ -150,7 +148,6 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
     protected void onPreExecute() {
         alertDialog = new AlertDialog.Builder(context).create();
         alertDialog.setTitle("Status");
-
     }
 
     @Override
@@ -172,8 +169,6 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
                 context.startActivity(XPActivityIntent);
             }
         }
-
-
     }
 
     @Override
@@ -181,15 +176,4 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
         super.onProgressUpdate(values);
     }
 
-    public String getStringImage(Bitmap bmp){
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        String result = "";
-        if (bmp != null) {
-            bmp.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-            byte[] imageBytes = baos.toByteArray();
-            String encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
-            result =  encodedImage;
-        }
-        return result;
-    }
 }

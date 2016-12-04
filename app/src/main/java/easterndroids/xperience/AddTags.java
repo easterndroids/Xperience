@@ -46,6 +46,8 @@ public class AddTags extends AppCompatActivity {
         ImageView imageView = (ImageView) findViewById(R.id.image_view_bmp);
         bitmap = (Bitmap) getIntent().getParcelableExtra("bitmap");
         imageView.setImageBitmap(bitmap);
+        BackgroundWork BGWork = new BackgroundWork(this);
+        BGWork.uploadImage = getStringImage(bitmap);
     }
 
     public void NavigateToGallery()
@@ -59,5 +61,18 @@ public class AddTags extends AppCompatActivity {
         GalleryIntent.putExtra("uname", uname);
         finish();
         startActivity(GalleryIntent);
+    }
+
+    public String getStringImage(Bitmap bmp){
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        String result = "";
+        if (bmp != null) {
+            bmp.compress(Bitmap.CompressFormat.JPEG, 90, baos);
+            byte[] imageBytes = baos.toByteArray();
+            String encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
+            result =  encodedImage;
+        }
+        System.out.println("Start Image: "+result+" End Image");
+        return result;
     }
 }
