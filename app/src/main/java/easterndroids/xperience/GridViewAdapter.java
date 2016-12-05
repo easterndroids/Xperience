@@ -14,7 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class GridViewAdapter extends BaseAdapter {
 
@@ -58,7 +57,7 @@ public class GridViewAdapter extends BaseAdapter {
 
         // Set file name to the TextView followed by the position
         //text.setText(filename[position]);
-
+        System.out.println("Adapter Position: "+position);
         // Decode the filepath with BitmapFactory followed by the position
         Bitmap bmp = BitmapFactory.decodeFile(filepath[position]);
 

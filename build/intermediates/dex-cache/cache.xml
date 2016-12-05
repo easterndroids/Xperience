@@ -3,678 +3,687 @@
 
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.8.0/jars/classes.jar"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="74ac7cbcf0de4a88e59612dc3a9e3f9e71acb4ca">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-9.8.0_d89f0b4fabac7efb46ad998e63898819118b48a3/classes.dex" />
+        sha1="21b47f7c2a033810539b6ba8bd72e5ee03e5a22b">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_2b50d0fb4f8b69f2dc68805655dd3a9b48407d01\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="190a642ba16d1421296a4d794606279b80039c59">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.8.0_e60240ada55ea8644d49b9dfd30f3323a9935fe6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="c81df6bd515398ebe45089b0b16c55752a131f6a">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-9.8.0_4549813f85477a277d75b121b05a4a7f5bd72597/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="3daa7a9c9009fd386872a84c177a76979bdcafd6">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-9.8.0_1e3c2732d75ea2f2fe73b77e81d09646b008d5aa/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_1c88d2fd00075b11a39d558b095dccac502f9690/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/palette-v7/24.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-palette-v7-24.0.0_c58de17ff81a22a653363253e5c62e4795008a1b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="5ffe8867f51cfc726e9fb21db1e5b6962ebf25a0">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-9.8.0_97487378f51c6ef39dce66112cf02ca62e524dfb/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="7fd91ec2730fdaa82906aad32a3f3d3e574bae56">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-9.8.0_7afda8c4c775741cdbb32e210b48e2023b1ace62/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_032cc1d0a1b1644b0e53fbfa731b6a693086fc80/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.8.0_90cc4e1a24664e703145c3f13631ca5021bd794f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_4d75d5a77b81ec3fa01036cfdea51914098ff483/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="ee5304fd374e0b4ebf6b42d4037fbfb2c5336511">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-clearcut-9.8.0_68e21301deaa9c6a109a70ba071ad9154c93d898/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.0-alpha9/constraint-layout-solver-1.0.0-alpha9.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="6a908fd0803cc5f65b007101002aec06dc7544da">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.0-alpha9_c8605ab745363918194188da6354ff5720c8f528/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.8.0_10be26835d3cdcffe100ca60d37dc181acb2034d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="50e35ae101a679c4c8ef3dda075b1df9d5d947d9">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-impl-9.8.0_ca4519cfc64b75373b38f9ffde1d4b4379e2334a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="16afe57c1d7f8165d107c7806ce7b0c71de87159">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-9.8.0_97aeb1427902d193d5d8e3b47c9244773c046d08/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="910c013c511f752c4bbe24c5f492f669f4a3ccc0">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-9.8.0_290235329028344aac6a69030f8be4839e590686/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_414605e315f79770a39aba76316e396c1508e928/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="289cad663c288ce965463cb9ece8b35cc7de0fac">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-config-9.8.0_ce2ac12118b5126a2b751101aec1b54be5561e33/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="679251204de40ace98776a6f4e3a649c27e3d89f">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-places-9.8.0_3b4388a7de08e775412aaad77f06ca91948dcbd5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="9ff04cc3470178a44512624036751a803418c2ca">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.8.0_81a5022ea13c746acd86fe36998dd72abd9b6a22/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-7.0.1_7cd6d9d0aee3db422dcf95487a7045e220cce230/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="a1ed98e01bd58976d80c062fd0ea2968a1ff68a1">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-base-9.8.0_9faa180c15f210907d8c81f7715980aa52f505a8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="a7a04d6b7c01e569a285fa627cf64f5b05295906">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-fitness-9.8.0_d3fb134cefd3cd4cd9aa61a2071afc279f6c2d76/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-instantapps/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="00d358528c5a8731a6e19bca910cbb3fd755ee31">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-instantapps-9.8.0_63da74117af6493e57967d6d8f9f93bc49a6c831/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-awareness/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="a2537b11ae24b42172d34e2a613fc0b903c56158">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-awareness-9.8.0_31fb6bf3546bca3a95d0ca9ee103686cef208249/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_4766726ea15041c77ad1dbe9c191154c48fbde8f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="03df48d3713661d66ad024b1e406259a4c26fcac">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-9.8.0_b804c223012c661ca0ede531f03d971315f25467/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="a30aea7df545072ad3c06f56b2efc13e67222140">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-9.8.0_683e1c141bef0d77db7669cca348f981e2f486a8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="cef85cfc7df40e29fbea58844dd4c1e7d0b15542">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-9.8.0_54dcaffaed5f5288c8e8f7e4eadeed9566dd44a5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_c12d3b1b7ab5158b8eece057b7029d24f0851893/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_a3b48e7dee34a13eef15e88fbce33863d9c7d257/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_acc93e4e9c8d7a461a12bc4b4cc304fe5700c37b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.8.0/jars/classes.jar"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.8.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="15e59454416c6341bd3ed2533b585cd340682dd1">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-9.8.0_0d5e2537358798bea3a9f8154e84e31e52b7219d/classes.dex" />
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.8.0_462b45b14254ff063b3b1614f22f9ffb58577773\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="12510a9521d9cb58249c217c946390081f98e5e5">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_519025a713484841797287dd94e6120a6d951ce0/classes.dex" />
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_c85453d9c1bfaba501a8297e22abda7b650368e4\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="2d3035050a075484cbf2e33f1ce1f779bae4d451">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-9.8.0_8afc8ba4dba65b00ed58ba110e2588672f32721d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-9.8.0_2edc55b74e4f91f517daf80171cba646ba3601c6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e3234cd25e23069abd48ecd2117bc0e8011bf45a">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appindexing-9.8.0_1347adbdd8082737e55b53bc8d33896bd2c251af/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_833c5f622f795a6a50141650bf7081afc0b8d8fe/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e56f31b23ddb067f95f01255295167db7c798612">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appinvite-9.8.0_ece83be1514d4057528881458ff49aa186fea9b3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="fbb3885c40e431cd2b0dc69c0cab2bf6d5da7b43">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-games-9.8.0_44b8f2374611421f9276bca2c3c2b299554c8c2c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/libs/internal_impl-24.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_b438801041ab7d6628b4d51fc23dad72f7d9a3e3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_81b17e817c906199aad9c392eb7ef4e6ec9e88fc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="363a20f1d25336e827dd24020f2ecdc42d62638f">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gass-9.8.0_6e8ded32ef236fc2a0326d0a7dd4d08959dc7919/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/9.8.0/jars/classes.jar"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\9.8.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="20a3c4e355150c15c13dd58045d43ad0c717d916">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-9.8.0_9315964095270b83208a38e2fb7ed4fbb34e63ac/classes.dex" />
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-safetynet-9.8.0_cb8817123b952813a41037879e9c123392fbcacb\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.8.0/jars/classes.jar"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.8.0_d543863d19bb91fde55b51793843e3142fcaa9ac/classes.dex" />
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_529287b84ec925841570f50e6cb9ec7389bec4ae\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-module/9.8.0/jars/classes.jar"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="3f8f779a22cbb4c4d0759467a4f1011bb5252970">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-module-9.8.0_f1abd500576d5f2bbb3dac3a69d73ca3cd002ab5/classes.dex" />
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-24.0.0_c6d43addeb944dcb692700fc6ae79a51b4f15ba3\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="6b6f292b8b951dcf2ecf2b20853e3eabc7d65c48">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-9.8.0_556434b02b58e1d9a01484cbe6bc57e7cd87ddfb/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="b4671be3d1288bf4e5f527cd33e42909fbe4ecc6">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-crash-9.8.0_eef6fb2e72235890af5afe511ba23b34e68f383e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0b8e087da59c0b062c33f49a335e59f907086da2">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-9.8.0_314453f805e2806f2eb324a406f21c2599e86e4a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="ca851be26ff89f5b32cc222cee98139fb3fac830">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-9.8.0_ba11edb7f95cda54be56b2b00ef788e600ebdae2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-9.8.0_40aa1bef05e143177d29632208fb593aaa36c113/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0-alpha9/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="f2b64f6a762f61a2379d6a79af03e2ee56eefe0b">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support.constraint-constraint-layout-1.0.0-alpha9_c66af060c0f9dcd3fe995b2cee1dfd4ba0ff4995/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="055eed08c9cff50cac0db69c74c4d9ff7aef3d84">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-framework-9.8.0_e4c1ae10b5dbc6a38239810f8299a98218fcba7b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="a972970c8beddb69c198f61f3fc55f0606a7dfe3">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-9.8.0_1236824056c4a535d0c88410ab630a76f6cd8ba1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0b53c4b90654b67ee3892a8e2e7b819c083ab7a6">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-drive-9.8.0_cde7088b318a4fb821012cdd9f4bbaf30673455a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="266570862e5792ef3c51143a8b8593cf54fac68d">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-api-9.8.0_c7d22d8e15caef5f2af18f6c97cbb0347a034e17/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="85299bf1924dde0200109a58033c5ef84ecb6991">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-iid-9.8.0_f7b29b098a1d0bf600535157e7c5d10b1731583b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_7d83579765484dffe8eeebac0628b4229f437f61/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_172643b8a44191b331f5e16ee29efad8441bd65c/classes.dex" />
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_ee61d76c3ac7462701b95c03d09a14363678a711\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\9.8.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_add8ead559662d296c504b26f3d10e11c9d3221b/classes.dex" />
+        sha1="a972970c8beddb69c198f61f3fc55f0606a7dfe3">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-9.8.0_24ca5b64d30fa659b8925c496cd51495fbf5ddcf\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.8.0/jars/classes.jar"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.8.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="5f47ede9561595584dca71104baa0fecb36dda87">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-9.8.0_c7467529efc4be26b6e2579845b1823fa45ba497/classes.dex" />
+        sha1="0b53c4b90654b67ee3892a8e2e7b819c083ab7a6">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-9.8.0_eaa422d8097c4c497e777d1b0d11c3e5c1a7387a\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.8.0/jars/classes.jar"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.8.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="9dae58326f6f6a515022468cce56dd04ec3b9fdb">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-9.8.0_246f9375436d9e15e94370e929af5429a90d531e/classes.dex" />
+        sha1="9ff04cc3470178a44512624036751a803418c2ca">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-9.8.0_d67e09e6f3c77e4db6d06c653b5f9c1a68ff854e\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/9.8.0/jars/classes.jar"
+        jar="C:\Users\Vaishali\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="ec9104b53aee77dfcfd2fe1c4add23ff7c4df55f">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-common-9.8.0_dc36a6777ab0707a3ee5582d0cc3a799907f1337/classes.dex" />
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_9da2c45d5dd9a75521bb38ce12ce63ba1f1432f1\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.8.0/jars/classes.jar"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.8.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.8.0_88acba4f0267351eea26b4f9487f923025c4f74c/classes.dex" />
+        sha1="16afe57c1d7f8165d107c7806ce7b0c71de87159">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-9.8.0_03d32be3225f43eb62f4e20f4cc613b45e3d507b\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ee5304fd374e0b4ebf6b42d4037fbfb2c5336511">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-clearcut-9.8.0_ffe89a6e5beec1f4e02c0a382606af4dcddf4a2e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="289cad663c288ce965463cb9ece8b35cc7de0fac">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-config-9.8.0_2b71aae47e7d7f6f6471ef3a329d31e938558bc5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_d46e928567f953795890cffdda97143560064096/classes.dex" />
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_1624e6e6d1ca09d8182707b7489d698a80ab7d68\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.8.0/jars/classes.jar"
+        jar="C:\Users\Vaishali\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-alpha9\constraint-layout-solver-1.0.0-alpha9.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="4438b1a7848a7c571122ba618aa1304514aabee6">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-common-9.8.0_0f4084eb39bea0fdc0804b10dfcf8f79dd565f15/classes.dex" />
+        sha1="6a908fd0803cc5f65b007101002aec06dc7544da">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.0-alpha9_1616abadb6a4e2177cf7f854202837d7cbe9a6a9\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.8.0/jars/classes.jar"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_22fd181f38500c448aaf127d0332f8fc9829ab97\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c81df6bd515398ebe45089b0b16c55752a131f6a">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-nearby-9.8.0_c0cbc6c460d768b757637f79729bcfc4e0d58aa6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="363a20f1d25336e827dd24020f2ecdc42d62638f">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gass-9.8.0_09122e9affd6f14cb160f905315565cac7032b10\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d784397729fd62c9bb690f8d7691fd622d275361">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_99f7ccd2d80e5a3217871c37d3e1e3c416af033f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a30aea7df545072ad3c06f56b2efc13e67222140">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-9.8.0_39b3bd217912362005a1bedf70f278a7fb9c5f07\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.8.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="f2d240dd085626f03f759c41d628a0c8b63e491f">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-9.8.0_5096c9f3399ca4e0f34d8a9dd3302e66ab45e73d/classes.dex" />
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-9.8.0_bdd9157216b20817a05d1e68a2d2f16760844be0\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_b3d81946e796468cadda79b9e5a2e9c50f9c1663/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e9b2cfdfd59b03643f1e240668275378b96615a8">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-lite-9.8.0_5bfc2268c6784844f5dfa5b5e3c426b64a6c5c7a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="84d63ab9360876e2bc0ced533f929b4db41d16c2">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_d1e3891fa044d79ef146b9d974421284c1cbb3d6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.mcxiaoke.volley/library-aar/1.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e40b9a81989bd4a846018551c280f8c4d837bf2e">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.mcxiaoke.volley-library-aar-1.0.0_96501cd7ee7c99af48e4cba374cbdf35490e9523/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_eb090bf5337111ab270e33d1325f969229fedd4a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_f86215a5c8be693f3070d1caf74677bd5ef1aa28/classes.dex" />
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_c0f4b9abf78541a35f4d84a8d180a27351b1419e\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/zhuangyuan/Xperience/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/classes.jar"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbb3885c40e431cd2b0dc69c0cab2bf6d5da7b43">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-games-9.8.0_ed75f9cca9f3f2c3b64564e36cd7c351cd9ad37d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_993411eeb6e09630b14011a0d05c26b2dc421caf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="50e35ae101a679c4c8ef3dda075b1df9d5d947d9">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-impl-9.8.0_38a33e8ecb6ac362416d918c66f6206e40b8652f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.8.0_2ec2c399fa66d0bab621922afb5ce890dc2e3f5e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e3234cd25e23069abd48ecd2117bc0e8011bf45a">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-9.8.0_18716a87c6603303e88a0fa9bb631636e41153dd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="910c013c511f752c4bbe24c5f492f669f4a3ccc0">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-9.8.0_29e2972f13ea0c6a98c87a81b0cd3edb5890faed\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="3daa7a9c9009fd386872a84c177a76979bdcafd6">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-9.8.0_0f1ce6e16a64e54fbb2c435f2e2ac0b8aa4245ec\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
-        <dex dex="/Users/zhuangyuan/Xperience/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-mediarouter-v7-24.0.0_009d0717b1af5ddf27929242da2240aab15feb5e/classes.dex" />
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-mediarouter-v7-24.0.0_92f8a5aa1da9804b658a09c9f02ec64484e31234\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-instantapps\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="00d358528c5a8731a6e19bca910cbb3fd755ee31">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-instantapps-9.8.0_41c8d9dc2184d06962a36866f9790e98389eda40\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-awareness\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a2537b11ae24b42172d34e2a613fc0b903c56158">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-awareness-9.8.0_df5ef86f609103fd01c00a3775c81098513d8f42\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-9.8.0_65cb8072cce31bd49fa29702266010509b8648da\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="85299bf1924dde0200109a58033c5ef84ecb6991">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-iid-9.8.0_e7fd68aee3e5ba6264d697d67dde126792acd08c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_f3b96b1407b3c56dcb0e6da6b329e85f780b0d1f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast-framework\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="055eed08c9cff50cac0db69c74c4d9ff7aef3d84">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-framework-9.8.0_6e24b8fe7df05eb0a8abd74439b03d213ad3889e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="cef85cfc7df40e29fbea58844dd4c1e7d0b15542">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-9.8.0_201da5a4b40ebe8fd85fb3b3310d2cf89166d26d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9dae58326f6f6a515022468cce56dd04ec3b9fdb">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-9.8.0_fbfc407939c6a419907edc2d174be45243fcdc11\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5ffe8867f51cfc726e9fb21db1e5b6962ebf25a0">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-messaging-9.8.0_feaef03bba5afee7d31d519571f2e6248b212b1b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="03df48d3713661d66ad024b1e406259a4c26fcac">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.8.0_2fdfe4dc49e2bc014008e7324ffdfc514715b153\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_ba944f0e7191c33c0ea9d3249146861fe3d978e2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.8.0_36f55385a8045cbb920746e2e985cc696f225f96\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7fd91ec2730fdaa82906aad32a3f3d3e574bae56">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-9.8.0_0a48905ce9ee0f6dd3063e99fe23f2dac7ae66d5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="190a642ba16d1421296a4d794606279b80039c59">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.8.0_f0f8a0572d28ab4ccbbb646d63c3df634cddd235\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b4671be3d1288bf4e5f527cd33e42909fbe4ecc6">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-crash-9.8.0_bc92a1d2762ee36aa500f85c3c72ab75ba45fcb0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.8.0_3d588e2480449b02562eea6b5a8e9c6c754b2ebb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="266570862e5792ef3c51143a8b8593cf54fac68d">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-9.8.0_71fba4febbcaeaea64e15a0ec23693d5ab9c973c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_3e25b2ae807d07739b5739d6dad5e4240ad1f252\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_d2c0ce6cc85d8fbd2596d62b82f03e5100251780\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="6b6f292b8b951dcf2ecf2b20853e3eabc7d65c48">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.8.0_f0d8f092bb62b5ee57864939bf49ee55ead82e9b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-places\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="679251204de40ace98776a6f4e3a649c27e3d89f">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-places-9.8.0_71e1a858dc9b6eb4142bddadff7725e1046b34e2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e56f31b23ddb067f95f01255295167db7c798612">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-9.8.0_0031fe6043485b0fb0cd4a96fa6015392b49a4d8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\butterknife-7.0.1_eb2d8c9b9af7d4a5c59ddaefabc2e676d3e0d4d0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0b8e087da59c0b062c33f49a335e59f907086da2">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-9.8.0_ce37289e3eacd700db6b15aae0160e561cad29d9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.8.0_e546fd59efd0e864a2d19fb1325b65c9ce85b8f4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_6c639d7ddba6d3c0ab457603a87919aa323a3413\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e9b2cfdfd59b03643f1e240668275378b96615a8">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-lite-9.8.0_5a108e71eb1b73e575d6771f3d028b01c147fc56\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="74ac7cbcf0de4a88e59612dc3a9e3f9e71acb4ca">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-9.8.0_65664994374803c5be77f229e0287628602de443\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f47ede9561595584dca71104baa0fecb36dda87">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.8.0_b1467fa122d4f299b7c890a4c4f7cb3336f57304\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ec9104b53aee77dfcfd2fe1c4add23ff7c4df55f">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-common-9.8.0_98a55a1897908d031c0a4cc3f770115a9f50bf2d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-alpha9\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f2b64f6a762f61a2379d6a79af03e2ee56eefe0b">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support.constraint-constraint-layout-1.0.0-alpha9_c548024f3ad26cc6b48ce5b7ee65d25fd65b4b19\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_7a0c8a28d2a34b0cd3cad76f10aee977f2d8506b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ca851be26ff89f5b32cc222cee98139fb3fac830">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-9.8.0_e9a45c8b5d15e3f277b3a27666d8f20fd84875d5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_49dc532a8d4876ac40d4c6340208e2c8e70f2cab\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_e6a3f51674bb775fb81730a5f0fc45785a3889f5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-9.8.0_e4c112189d46a61fd36fb8e237c69e884f6fffdc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_287576d3a4e1b7b159542695cbeb222ec508fccd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_8da1f034ec9a9226c2884d1befaffbab2d17d413\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\library-aar\1.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e40b9a81989bd4a846018551c280f8c4d837bf2e">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.mcxiaoke.volley-library-aar-1.0.0_3f0134d96b066184c3f315919c41a3332d1ca2b8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a1ed98e01bd58976d80c062fd0ea2968a1ff68a1">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-9.8.0_0195319b60119e484ab290c31e1af0f7ae5d5bf3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a7a04d6b7c01e569a285fa627cf64f5b05295906">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-fitness-9.8.0_d0e647483b743dabb4cff61e1909fb8ea2dc035f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="2d3035050a075484cbf2e33f1ce1f779bae4d451">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-9.8.0_cc55070f7d9f928ad71a5322fc1eb784e116759b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_87958eb98a7a1fb4d9900473a24a7acc3cabacb6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="3f8f779a22cbb4c4d0759467a4f1011bb5252970">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.8.0_4ab8167260719bfbd69f8ab85a663c8a2e0d855f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="4438b1a7848a7c571122ba618aa1304514aabee6">
+        <dex dex="C:\Users\Vaishali\Desktop\Xperience\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.8.0_1744531a676bba9fd688bcac1a579860f7533048\classes.dex" />
     </item>
 
 </items>

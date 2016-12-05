@@ -13,13 +13,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
+
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -99,11 +98,15 @@ public class UserGalleryActivity extends AppCompatActivity {
 
             for (int i = 0; i < listFile.length; i++) {
                 // Get the path of the image file
-                FilePathStrings[i] = listFile[i].getAbsolutePath();
-                // Get the name image file
-                FileNameStrings[i] = listFile[i].getName();
-                System.out.println("FilePathStrings: "+FilePathStrings[i]);
-                System.out.println("FileNameStrings: "+FileNameStrings[i]);
+                System.out.println("List File Size: "+listFile[i].length());
+                if(listFile[i].length() != 0) {
+                    FilePathStrings[i] = listFile[i].getAbsolutePath();
+                    // Get the name image file
+                    FileNameStrings[i] = listFile[i].getName();
+                    System.out.println("FilePathStrings: " + FilePathStrings[i]);
+                    System.out.println("FileNameStrings: " + FileNameStrings[i]);
+                    System.out.println("List File Size 2: "+listFile[i].length());
+                }
             }
         }
 
