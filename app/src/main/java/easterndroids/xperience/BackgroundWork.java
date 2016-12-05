@@ -49,6 +49,7 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
         String type = params[0];
         uname = params[1];
         String login_url = "http://xperience.x10host.com/login.php";
+        String register_url = "http://xperience.x10host.com/register.php";
         if (type.equals("login")){
             try
             {
@@ -140,7 +141,52 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
                 e.printStackTrace();
                 System.out.println("Error 2: "+e.getMessage());
             }
+        }else if(type.equals("register")){
+
+            try
+            {
+                String firstName = params[1];
+                String lastName = params[2];
+                String email = params[3];
+                String mobile = params[4];
+                String username = params[5];
+                String password = params[6];
+                URL url = new URL(register_url);
+                HttpURLConnection httpURLConnection =(HttpURLConnection)url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream,"UTF-8"));
+                String post_data = URLEncoder.encode("FIRST_NAME","UTF-8")+"="+URLEncoder.encode(firstName,"UTF-8")+"&"
+                        + URLEncoder.encode("LAST_NAME","UTF-8")+"="+URLEncoder.encode(lastName,"UTF-8")+"&"
+                        + URLEncoder.encode("EMAIL","UTF-8")+"="+URLEncoder.encode(email,"UTF-8")+"&"
+                        + URLEncoder.encode("MOBILE","UTF-8")+"="+URLEncoder.encode(mobile,"UTF-8")+"&"
+                        + URLEncoder.encode("USERNAME","UTF-8")+"="+URLEncoder.encode(username,"UTF-8")+"&"
+                        + URLEncoder.encode("PASSWORD","UTF-8")+"="+URLEncoder.encode(password,"UTF-8");
+                bufferedWriter.write(post_data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream,"iso-8859-1"));
+                String result = "";
+                String line = "";
+                while ((line = bufferedReader.readLine())!= null){
+                    result += line;
+                }
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                return result;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }
+
         return null;
     }
 
@@ -152,8 +198,8 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
 
     @Override
     protected  void onPostExecute(String result) {
-        //alertDialog.setMessage(result);
-        //alertDialog.show();
+        alertDialog.setMessage(result);
+        alertDialog.show();
         if (result != null)
         {
             Log.d("result:", result);
