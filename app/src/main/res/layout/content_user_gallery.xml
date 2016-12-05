@@ -20,6 +20,7 @@
         android:columnWidth="150dp"
         android:numColumns="auto_fit"
         android:stretchMode="columnWidth"
+        android:adjustViewBounds="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />

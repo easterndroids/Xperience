@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.GestureDetectorCompat;
@@ -39,7 +40,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     private static final String JSON_ARRAY ="result";
     private static final String IMAGE_URL = "url";
     private EditText et;
-    public String uname = "";
+
 
     private JSONArray arrayImages= null;
 
@@ -53,6 +54,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     private Button buttonNavigate;
     private ImageView imageView;
     private GestureDetectorCompat gestureObject;
+    public String uname = "";
     public String latitude;
     public String longitude;
 
@@ -238,7 +240,16 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         if(v== buttonNavigate){
             Intent intent = new Intent(this, MapsActivity.class);
             intent.putExtra("uname",uname);
+            intent.putExtra("latitude",latitude);
+            intent.putExtra("longitude",longitude);
             startActivity(intent);
+            System.out.println("In Search - Latitude: "+latitude+" Longitude: "+longitude);
+            /*Uri gmmIntentUri = Uri.parse("google.navigation:latitude,longitude&avoid=tf");
+            Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+            mapIntent.setPackage("com.google.android.apps.maps");
+            if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                startActivity(mapIntent);
+            }*/
         }
     }
 

@@ -18,6 +18,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -35,6 +37,7 @@ public class UserGalleryActivity extends AppCompatActivity {
     File file;
     public static String uname = "";
     public ImageView imageView;
+    public String  fullPath;
 
 
     @Override
@@ -61,7 +64,7 @@ public class UserGalleryActivity extends AppCompatActivity {
             Toast.makeText(this, "Error! No SDCARD Found!", Toast.LENGTH_LONG)
                     .show();
         } else {
-            String fullPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Xperience/";
+            fullPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Xperience/";
             boolean success = true;
             try
             {
@@ -153,22 +156,41 @@ public class UserGalleryActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         System.out.println("Request Code: "+data);
+        Bitmap bmp = null;
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             setPic();
-            //Intent GalleryIntent = new Intent(this, UserGalleryActivity.class);
-            //GalleryIntent.putExtra("uname", uname);
-            //finish();
-            //GalleryIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-            //startActivity(GalleryIntent);
+            /*Bundle extras = data.getExtras();
+            bmp = (Bitmap) extras.get("data");
+            FileOutputStream out = null;
+            Boolean success = false;
+            file = new File(fullPath);
+            try {
+                out = new FileOutputStream(fullPath);
+                bmp.compress(Bitmap.CompressFormat.PNG, 100, out); // bmp is your Bitmap instance
+                // PNG is a lossless format, the compression factor (100) is ignored
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (out != null) {
+                        out.close();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
 
-        }
+            Intent TagViewIntent = new Intent(this, AddTags.class);
+            TagViewIntent.putExtra("bitmap", bmp);
+            TagViewIntent.putExtra("uname", uname);
+            startActivity(TagViewIntent);
+
+        }*/}
     }
 
     public void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        MyFileContentProvider MFCP = new MyFileContentProvider();
         takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, MyFileContentProvider.CONTENT_URI);
-        //takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, MFCP.getContentURI());
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
