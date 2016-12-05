@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -198,8 +199,8 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
 
     @Override
     protected  void onPostExecute(String result) {
-        alertDialog.setMessage(result);
-        alertDialog.show();
+        //alertDialog.setMessage(result);
+        //alertDialog.show();
         if (result != null)
         {
             Log.d("result:", result);
@@ -213,6 +214,10 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
                 XPActivityIntent.putExtra("uname", uname);
                 //context.startActivities(new Intent[]{new Intent(context, XperienceActivity.class)});
                 context.startActivity(XPActivityIntent);
+            }
+            else
+            {
+                Toast.makeText(context, "Invalid Login", Toast.LENGTH_LONG).show();
             }
         }
     }

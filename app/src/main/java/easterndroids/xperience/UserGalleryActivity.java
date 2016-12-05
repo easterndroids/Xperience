@@ -194,6 +194,7 @@ public class UserGalleryActivity extends AppCompatActivity {
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
+        //finish();
     }
 
     @Override

@@ -91,9 +91,12 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
 
     public void Navigate(View view)
     {
-        Intent intent = new Intent(this, MapsActivity.class);
-        intent.putExtra("uname",uname);
-        startActivity(intent);
+        System.out.println("Null Check: "+latitude+ " "+longitude);
+        if (latitude != null && longitude != null) {
+            Intent intent = new Intent(this, MapsActivity.class);
+            intent.putExtra("uname", uname);
+            startActivity(intent);
+        }
     }
 
     private void showImage(){
@@ -110,7 +113,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void moveNext(){
-        if(TRACK < arrayImages.length()){
+        if(arrayImages != null && TRACK < arrayImages.length()){
             TRACK++;
             showImage();
         }
@@ -237,7 +240,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         if(v== buttonMovePrevious){
             movePrevious();
         }
-        if(v== buttonNavigate){
+        if(v== buttonNavigate && latitude != null && longitude != null){
             Intent intent = new Intent(this, MapsActivity.class);
             intent.putExtra("uname",uname);
             intent.putExtra("latitude",latitude);

@@ -45,12 +45,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String type = "login";
         BackgroundWork backgroundWork = new BackgroundWork(this);
         backgroundWork.execute(type,username,password);
-        final Handler handler = new Handler();
+        /*final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 finish();
             }
-        }, 900);
+        }, 900);*/
     }
 }

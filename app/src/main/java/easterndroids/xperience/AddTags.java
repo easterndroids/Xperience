@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 
@@ -59,10 +60,11 @@ public class AddTags extends AppCompatActivity {
         String type = "Moment Insert";
         BackgroundWork backgroundWork = new BackgroundWork(this);
         backgroundWork.execute(type,uname,Tag);
-        Intent GalleryIntent = new Intent(this, UserGalleryActivity.class);
+        Intent GalleryIntent = new Intent(this, XperienceActivity.class);
         GalleryIntent.putExtra("uname", uname);
         finish();
         startActivity(GalleryIntent);
+        Toast.makeText(getBaseContext(), "Xperience saved", Toast.LENGTH_LONG).show();
     }
 
     public String getStringImage(Bitmap bmp){

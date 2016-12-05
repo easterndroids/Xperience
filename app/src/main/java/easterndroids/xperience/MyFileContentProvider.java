@@ -69,10 +69,16 @@ public class MyFileContentProvider extends ContentProvider {
                 GlobalPath = mFile.getAbsolutePath();
                 android.net.Uri urifile = android.net.Uri.parse(mFile.toURI().toString());
                 bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver() , urifile);
+                System.out.println("mFile Length: "+mFile.length());
+                /*if (mFile.length() == 0)
+                    mFile.delete();*/
+
             }
             else
             {
                 System.out.println("mFile Exists");
+                if (mFile.length() == 0)
+                    mFile.delete();
             }
 
             System.out.println("Created File: "+ mFile.getAbsolutePath()+" "+ mFile.getName());
