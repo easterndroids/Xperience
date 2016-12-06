@@ -33,7 +33,6 @@ import java.text.DecimalFormat;
 
 public class SearchActivity extends AppCompatActivity implements View.OnClickListener {
     private String imagesJSON;
-
     private static final String JSON_ARRAY ="result";
     private static final String IMAGE_URL = "url";
     private EditText et;
@@ -57,6 +56,9 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        /*******************************************************************************************
+         *initialize buttons and add listeners
+         ******************************************************************************************/
         super.onCreate(savedInstanceState);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -71,12 +73,17 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         buttonFetchImages.setOnClickListener(this);
         buttonMoveNext.setOnClickListener(this);
         buttonMovePrevious.setOnClickListener(this);
-
         buttonNavigate = (Button) findViewById(R.id.buttonNav);
         buttonNavigate.setOnClickListener(this);
     }
 
 
+
+
+
+    /*******************************************************************************************
+     *Extract json, show image and get the location of photos
+     ******************************************************************************************/
     private void extractJSON(){
         try {
             JSONObject jsonObject = new JSONObject(imagesJSON);
@@ -86,15 +93,6 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    public void Navigate(View view)
-    {
-        System.out.println("Null Check: "+latitude+ " "+longitude);
-        if (latitude != null && longitude != null) {
-            Intent intent = new Intent(this, MapsActivity.class);
-            intent.putExtra("uname", uname);
-            startActivity(intent);
-        }
-    }
 
     private void showImage(){
         try {
@@ -109,6 +107,10 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
+
+    /*******************************************************************************************
+     *add buttons' fuctions: next, previous and navigate
+     ******************************************************************************************/
     private void moveNext(){
         if(arrayImages != null && TRACK < arrayImages.length()){
             TRACK++;
@@ -120,6 +122,15 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         if(TRACK>0){
             TRACK--;
             showImage();
+        }
+    }
+    public void Navigate(View view)
+    {
+        System.out.println("Null Check: "+latitude+ " "+longitude);
+        if (latitude != null && longitude != null) {
+            Intent intent = new Intent(this, MapsActivity.class);
+            intent.putExtra("uname", uname);
+            startActivity(intent);
         }
     }
 
@@ -138,7 +149,9 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         finish();
         return super.onOptionsItemSelected(item);
     }
-
+    /*******************************************************************************************
+     *using AsyncTask to read our JSON in order to get all images
+     ******************************************************************************************/
     private void getAllImages() {
         class GetAllImages extends AsyncTask<String,Void,String>{
             ProgressDialog loading;
@@ -184,6 +197,13 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         gai.execute(IMAGES_URL);
     }
 
+
+
+
+    /*******************************************************************************************
+     *This method will take a string as a parameter.
+     *The string would have the url to image extracted from json array
+     ******************************************************************************************/
     private void getImage(String urlToImage){
         class GetImage extends AsyncTask<String,Void,Bitmap>{
             ProgressDialog loading;
@@ -220,7 +240,9 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         GetImage gi = new GetImage();
         gi.execute(urlToImage);
     }
-
+    /*******************************************************************************************
+     *set up buttons' onclick fuctions.(next, previous and navigate)
+     ******************************************************************************************/
     @Override
     public void onClick(View v) {
         if(v == buttonFetchImages) {

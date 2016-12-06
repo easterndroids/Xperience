@@ -82,7 +82,9 @@ public class XperienceActivity extends AppCompatActivity  {
         finish();
         return super.onOptionsItemSelected(item);
     }
-
+    /*******************************************************************************************
+     *add swipe fuction and navigate to search page
+     ******************************************************************************************/
     class LearnGesture extends GestureDetector.SimpleOnGestureListener{
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {

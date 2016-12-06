@@ -23,6 +23,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     public void onClick(View v) {
+        /*******************************************************************************************
+         *navigate to the register page
+         ******************************************************************************************/
         if(v == buttonRegister){
             Intent intent = new Intent(this, SignupActivity.class);
             startActivity(intent);
@@ -35,6 +38,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String password = PasswordEt.getText().toString();
         String type = "login";
         BackgroundWork backgroundWork = new BackgroundWork(this);
+            //takes context from backgroundWork class
         backgroundWork.execute(type,username,password);
     }
 }

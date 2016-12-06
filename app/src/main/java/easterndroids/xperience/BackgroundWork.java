@@ -37,6 +37,10 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
         uname = params[1];
         String login_url = "http://xperience.x10host.com/login.php";
         String register_url = "http://xperience.x10host.com/register.php";
+        /*******************************************************************************************
+         *perform post operation and validate username and password
+         ******************************************************************************************/
+
         if (type.equals("login")){
             try
             {
@@ -72,6 +76,9 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
             }
 
         }
+        /*******************************************************************************************
+         *Insert Moment photos and it's location
+         ******************************************************************************************/
         if (type.equals("Moment Insert"))
         {
             String Tag = params[2];
@@ -124,7 +131,12 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
                 e.printStackTrace();
                 System.out.println("Error 2: "+e.getMessage());
             }
-        }else if(type.equals("register")){
+
+        }
+        /*******************************************************************************************
+         *post the insert-user-information request to php page
+         *******************************************************************************************/
+        else if(type.equals("register")){
 
             try
             {
@@ -181,9 +193,12 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
 
     @Override
     protected  void onPostExecute(String result) {
+        /*******************************************************************************************
+         *If username and password are matched, navigate to the Xperience page
+         ******************************************************************************************/
         if (result != null)
         {
-            Log.d("result:", result);
+
             if (result.equals("login success")) {
                 Intent XPActivityIntent = new Intent(context, XperienceActivity.class);
                 XPActivityIntent.putExtra("uname", uname);

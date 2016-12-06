@@ -61,7 +61,6 @@ public class SignupActivity extends AppCompatActivity
 
     public void signup()
     {
-        Log.d(TAG, "Signup");
 
         if (!validate())
         {
@@ -77,6 +76,9 @@ public class SignupActivity extends AppCompatActivity
         progressDialog.setMessage("Creating Account...");
         progressDialog.show();
 
+        /*******************************************************************************************
+         *post user's information to database
+         ******************************************************************************************/
         String firstName = _firstNameText.getText().toString();
         String lastName = _lastNameText.getText().toString();
         String email = _emailText.getText().toString();
@@ -84,8 +86,6 @@ public class SignupActivity extends AppCompatActivity
         String username = _Username.getText().toString();
         String password = _passwordText.getText().toString();
         String reEnterPassword = _reEnterPasswordText.getText().toString();
-
-        // TODO: Implementsignup logic here.
         String type = "register";
         BackgroundWork backgroundWork = new BackgroundWork(this);
         backgroundWork.execute(type,firstName,lastName,email,mobile,username,reEnterPassword);
@@ -116,7 +116,9 @@ public class SignupActivity extends AppCompatActivity
 
         _signupButton.setEnabled(true);
     }
-
+    /*******************************************************************************************
+     *check if user's information are valid
+     ******************************************************************************************/
     public boolean validate()
     {
         boolean valid = true;
