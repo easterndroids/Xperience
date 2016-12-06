@@ -45,13 +45,9 @@ public class UserGalleryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         imageView = (ImageView) findViewById (R.id.image_view_bmp);
         uname = getIntent().getStringExtra("uname");
-        /*Intent intent = getIntent();
-        finish();
-        startActivity(intent);*/
         setContentView(R.layout.activity_user_gallery);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -91,17 +87,13 @@ public class UserGalleryActivity extends AppCompatActivity {
 
         if (file.isDirectory()) {
             listFile = file.listFiles();
-            // Create a String array for FilePathStrings
             FilePathStrings = new String[listFile.length];
-            // Create a String array for FileNameStrings
             FileNameStrings = new String[listFile.length];
 
             for (int i = 0; i < listFile.length; i++) {
-                // Get the path of the image file
                 System.out.println("List File Size: "+listFile[i].length());
                 if(listFile[i].length() != 0) {
                     FilePathStrings[i] = listFile[i].getAbsolutePath();
-                    // Get the name image file
                     FileNameStrings[i] = listFile[i].getName();
                     System.out.println("FilePathStrings: " + FilePathStrings[i]);
                     System.out.println("FileNameStrings: " + FileNameStrings[i]);
@@ -110,14 +102,9 @@ public class UserGalleryActivity extends AppCompatActivity {
             }
         }
 
-        // Locate the GridView in gridview_main.xml
         grid = (GridView) findViewById(R.id.gridview);
-        // Pass String arrays to LazyAdapter Class
         adapter = new GridViewAdapter(this, FilePathStrings, FileNameStrings);
-        // Set the LazyAdapter to the GridView
         grid.setAdapter(adapter);
-
-        // Capture gridview item click
         grid.setOnItemClickListener(new OnItemClickListener() {
 
             @Override
@@ -125,11 +112,8 @@ public class UserGalleryActivity extends AppCompatActivity {
                                     int position, long id) {
 
                 Intent i = new Intent(UserGalleryActivity.this, ViewImage.class);
-                // Pass String arrays FilePathStrings
                 i.putExtra("filepath", FilePathStrings);
-                // Pass String arrays FileNameStrings
                 i.putExtra("filename", FileNameStrings);
-                // Pass click position
                 i.putExtra("position", position);
                 i.putExtra("uname", uname);
                 startActivity(i);
@@ -140,9 +124,7 @@ public class UserGalleryActivity extends AppCompatActivity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.test_navigation_activty, menu);
-
         return true;
     }
 
@@ -162,33 +144,7 @@ public class UserGalleryActivity extends AppCompatActivity {
         Bitmap bmp = null;
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             setPic();
-            /*Bundle extras = data.getExtras();
-            bmp = (Bitmap) extras.get("data");
-            FileOutputStream out = null;
-            Boolean success = false;
-            file = new File(fullPath);
-            try {
-                out = new FileOutputStream(fullPath);
-                bmp.compress(Bitmap.CompressFormat.PNG, 100, out); // bmp is your Bitmap instance
-                // PNG is a lossless format, the compression factor (100) is ignored
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                try {
-                    if (out != null) {
-                        out.close();
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            Intent TagViewIntent = new Intent(this, AddTags.class);
-            TagViewIntent.putExtra("bitmap", bmp);
-            TagViewIntent.putExtra("uname", uname);
-            startActivity(TagViewIntent);
-
-        }*/}
+        }
     }
 
     public void dispatchTakePictureIntent() {
@@ -197,7 +153,6 @@ public class UserGalleryActivity extends AppCompatActivity {
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
-        //finish();
     }
 
     @Override
@@ -207,23 +162,15 @@ public class UserGalleryActivity extends AppCompatActivity {
     }
 
     private void setPic() {
-        // Get the dimensions of the View
-        //int targetW = imageView.getWidth();
-        //int targetH = imageView.getHeight();
         int targetH = 100;
         int targetW = 100;
-        // Get the dimensions of the bitmap
         BitmapFactory.Options bmOptions = new BitmapFactory.Options();
         bmOptions.inJustDecodeBounds = true;
         MyFileContentProvider MFCP = new MyFileContentProvider();
         BitmapFactory.decodeFile(MFCP.GlobalPath, bmOptions);
         int photoW = bmOptions.outWidth;
         int photoH = bmOptions.outHeight;
-
-        // Determine how much to scale down the image
         int scaleFactor = Math.min(photoW/targetW, photoH/targetH);
-
-        // Decode the image file into a Bitmap sized to fill the View
         bmOptions.inJustDecodeBounds = false;
         bmOptions.inSampleSize = scaleFactor;
         bmOptions.inPurgeable = true;
@@ -233,6 +180,5 @@ public class UserGalleryActivity extends AppCompatActivity {
         TagViewIntent.putExtra("bitmap", bitmap);
         TagViewIntent.putExtra("uname", uname);
         startActivity(TagViewIntent);
-        //imageView.setImageBitmap(bitmap);
     }
 }

@@ -2,25 +2,17 @@ package easterndroids.xperience;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.location.Criteria;
-import android.location.LocationManager;
-import android.os.AsyncTask;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Base64;
+import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -38,12 +30,6 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
     }
     public String uname = "";
     public static String uploadImage = "";
-
-//    private final Activity mActivity;
-//
-//    public BackgroundWork( final Activity mActivity ) {
-//        this.mActivity = mActivity;
-//    }
 
     @Override
     protected String doInBackground(String... params) {
@@ -98,11 +84,7 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
                     Latitude = Double.toString(gps.getLatitude());
                     Longitude = Double.toString(gps.getLongitude());
                     System.out.println("Can get Location");
-                    // \n is for new line
                 }else{
-                    // can't get location
-                    // GPS or Network is not enabled
-                    // Ask user to enable GPS/network in settings
                     System.out.println("Can't get Location");
                     gps.showSettingsAlert();
                 }
@@ -199,25 +181,25 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
 
     @Override
     protected  void onPostExecute(String result) {
-        //alertDialog.setMessage(result);
-        //alertDialog.show();
         if (result != null)
         {
             Log.d("result:", result);
             if (result.equals("login success")) {
                 Intent XPActivityIntent = new Intent(context, XperienceActivity.class);
                 XPActivityIntent.putExtra("uname", uname);
-                //context.startActivities(new Intent[]{new Intent(context, XperienceActivity.class)});
                 context.startActivity(XPActivityIntent);
             } else if (result.contains("insertion success")) {
                 Intent XPActivityIntent = new Intent(context, UserGalleryActivity.class);
                 XPActivityIntent.putExtra("uname", uname);
-                //context.startActivities(new Intent[]{new Intent(context, XperienceActivity.class)});
                 context.startActivity(XPActivityIntent);
+            }
+            else if (result.equals("login not success"))
+            {
+                Toast.makeText(context, "Invalid Login", Toast.LENGTH_LONG).show();
             }
             else
             {
-                Toast.makeText(context, "Invalid Login", Toast.LENGTH_LONG).show();
+                Toast.makeText(context, "Registration Success", Toast.LENGTH_LONG).show();
             }
         }
     }

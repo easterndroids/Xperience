@@ -55,7 +55,6 @@ public class SignupActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 finish();
-                //overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
             }
         });
     }
@@ -96,10 +95,8 @@ public class SignupActivity extends AppCompatActivity
                 {
                     public void run()
                     {
-                        // On complete call either onSignupSuccess or onSignupFailed
-                        // depending on success
+
                         onSignupSuccess();
-                        // onSignupFailed();
                         progressDialog.dismiss();
                     }
                 }, 3000);

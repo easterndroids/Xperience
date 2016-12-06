@@ -1,16 +1,14 @@
 package easterndroids.xperience;
 
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.GestureDetector;
 import android.view.Menu;
@@ -20,7 +18,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -128,9 +125,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.test_navigation_activty, menu);
-
         return true;
     }
 
@@ -247,12 +242,6 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
             intent.putExtra("longitude",longitude);
             startActivity(intent);
             System.out.println("In Search - Latitude: "+latitude+" Longitude: "+longitude);
-            /*Uri gmmIntentUri = Uri.parse("google.navigation:latitude,longitude&avoid=tf");
-            Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-            mapIntent.setPackage("com.google.android.apps.maps");
-            if (mapIntent.resolveActivity(getPackageManager()) != null) {
-                startActivity(mapIntent);
-            }*/
         }
     }
 
@@ -267,7 +256,6 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
             if(e2.getX() > e1.getX()){
-                //left to right swipe navigate to search activity
                 Intent intent = new Intent(SearchActivity.this, XperienceActivity.class);
                 intent.putExtra("uname",uname);
                 finish();
@@ -280,230 +268,3 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//import android.content.Intent;
-//import android.os.Bundle;
-//import android.support.design.widget.FloatingActionButton;
-//import android.support.design.widget.Snackbar;
-//import android.support.v4.view.GestureDetectorCompat;
-//import android.support.v7.app.AppCompatActivity;
-//import android.support.v7.widget.SearchView;
-//import android.support.v7.widget.Toolbar;
-//import android.view.GestureDetector;
-//import android.view.MotionEvent;
-//import android.view.View;
-//import android.widget.EditText;
-//import android.widget.ImageView;
-//import android.widget.ListView;
-//
-//import java.io.InputStream;
-//import java.net.HttpURLConnection;
-//import java.net.URL;
-//
-//import android.app.Activity;
-//import android.graphics.Bitmap;
-//import android.graphics.BitmapFactory;
-//import android.os.Bundle;
-//import android.os.Handler;
-//import android.os.Message;
-//import android.view.View;
-//import android.widget.Button;
-//import android.widget.ImageView;
-//import android.widget.TextView;
-//
-//
-//public class SearchActivity extends Activity {
-//
-//    //声明地址
-//    private ImageView img;
-//    private EditText sv;
-//    private String url;
-//
-//    //在消息队列中实现对控件的更改
-//    private Handler handle = new Handler() {
-//        public void handleMessage(Message msg) {
-//            switch (msg.what) {
-//                case 0:
-//                    System.out.println("111");
-//                    Bitmap bmp=(Bitmap)msg.obj;
-//                    img.setImageBitmap(bmp);
-//                    break;
-//            }
-//        };
-//    };
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_search);
-//
-//        FloatingActionButton btn = (FloatingActionButton) findViewById(R.id.fab);
-//        img = (ImageView) findViewById(R.id.imageView);
-//
-//        btn.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View v) {
-//                //新建线程加载图片信息，发送到消息队列中
-//                new Thread(new Runnable() {
-//
-//                    @Override
-//                    public void run() {
-//                        // TODO Auto-generated method stub
-//                        sv = (EditText) findViewById(R.id.sv);
-//                        String tags = sv.getText().toString();
-//                        url = "http://xperience.x10host.com/searcher.php?q=";
-//                        url += tags;
-//                        Bitmap bmp = getURLimage(url);
-//                        Message msg = new Message();
-//                        msg.what = 0;
-//                        msg.obj = bmp;
-//                        System.out.println("000");
-//                        handle.sendMessage(msg);
-//                    }
-//                }).start();
-//            }
-//        });
-//    }
-//
-//    //加载图片
-//    public Bitmap getURLimage(String url) {
-//        Bitmap bmp = null;
-//        try {
-//            URL myurl = new URL(url);
-//            // 获得连接
-//            HttpURLConnection conn = (HttpURLConnection) myurl.openConnection();
-//            conn.setConnectTimeout(6000);//设置超时
-//            conn.setDoInput(true);
-//            conn.setUseCaches(false);//不缓存
-//            conn.connect();
-//            InputStream is = conn.getInputStream();//获得图片的数据流
-//            bmp = BitmapFactory.decodeStream(is);
-//            is.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return bmp;
-//    }
-//}
-//
-//
-//
-//
-//
-
-
-
-
-
-
-
-
-
-//
-//import easterndroids.xperience.MySQL.SenderReceiver;
-//
-//public class SearchActivity extends AppCompatActivity {
-//
-//    private GestureDetectorCompat gestureObject;
-//
-//    String urlAddress="http://xperience.x10host.com/searcher.php";
-//    SearchView sv;
-////    ListView lv;
-//    ImageView noDataImg,noNetworkImg;
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_search);
-////        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-////
-////        setSupportActionBar(toolbar);
-//        gestureObject = new GestureDetectorCompat(this,new SearchActivity.LearnGesture());
-//
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-//
-////        lv = (ListView) findViewById(R.id.lv);
-//        sv = (SearchView) findViewById(R.id.sv);
-////        noDataImg = (ImageView) findViewById(R.id.nodataImg);
-////        noNetworkImg = (ImageView) findViewById(R.id.noserver);
-//
-//        sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String query) {
-////                SenderReceiver sr = new SenderReceiver(SearchActivity.this,urlAddress,query,lv,noDataImg,noNetworkImg);
-////                sr.execute();
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String query) {
-////                SenderReceiver sr = new SenderReceiver(SearchActivity.this,urlAddress,query,lv,noDataImg,noNetworkImg);
-////                sr.execute();
-//
-//                return false;
-//            }
-//        });
-//
-//
-//    }
-//    @Override
-//    public boolean onTouchEvent(MotionEvent event) {
-//        this.gestureObject.onTouchEvent(event);
-//        return super.onTouchEvent(event);
-//    }
-//
-//    class LearnGesture extends GestureDetector.SimpleOnGestureListener{
-//
-//        @Override
-//        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-//            if(e2.getX() < e1.getX()){
-//                Intent intent = new Intent(SearchActivity.this, XperienceActivity.class);
-//                finish();
-//                startActivity(intent);
-//            }
-//
-//
-//
-//            return true;
-//        }
-//    }
-//
-//}

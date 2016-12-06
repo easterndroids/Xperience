@@ -20,7 +20,7 @@
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:largeHeap="true"
-        android:icon="@mipmap/xp"
+        android:icon="@mipmap/xp2"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">

@@ -31,21 +31,12 @@ public class XperienceActivity extends AppCompatActivity  {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        CleanGallery();
-        /*fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, NavigateToUserGalleryView(view), Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
+        //CleanGallery();
         fab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 NavigateToUserGalleryView(v);
             }
         });
-        /*if (getSupportActionBar() != null)
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
     }
 
     @Override
@@ -66,7 +57,7 @@ public class XperienceActivity extends AppCompatActivity  {
         {
             if(listFile[i].length() == 0)
             {
-                //listFile[i].delete();
+                listFile[i].delete();
             }
         }
     }
@@ -79,9 +70,7 @@ public class XperienceActivity extends AppCompatActivity  {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.test_navigation_activty, menu);
-
         return true;
     }
 
@@ -94,20 +83,14 @@ public class XperienceActivity extends AppCompatActivity  {
         return super.onOptionsItemSelected(item);
     }
 
-
     class LearnGesture extends GestureDetector.SimpleOnGestureListener{
-
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
             if(e2.getX() > e1.getX()){
-                //left to right swipe navigate to search activity
                 Intent intent = new Intent(XperienceActivity.this, SearchActivity.class);
                 intent.putExtra("uname",uname);
                 startActivity(intent);
             }
-
-
-
             return true;
         }
     }

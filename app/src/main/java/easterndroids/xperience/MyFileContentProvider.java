@@ -2,23 +2,16 @@ package easterndroids.xperience;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
-import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 import android.provider.MediaStore;
-import android.util.Base64;
-import android.widget.ImageView;
-
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-
-import static android.R.attr.password;
 
 /**
  * Created by ghvk1 on 2016-11-23.
@@ -70,8 +63,6 @@ public class MyFileContentProvider extends ContentProvider {
                 android.net.Uri urifile = android.net.Uri.parse(mFile.toURI().toString());
                 bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver() , urifile);
                 System.out.println("mFile Length: "+mFile.length());
-                /*if (mFile.length() == 0)
-                    mFile.delete();*/
 
             }
             else
